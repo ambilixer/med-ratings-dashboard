@@ -10,7 +10,7 @@ An interactive dashboard of how patients on Drugs.com rate medications used for 
 
 ## What it shows
 
-- **Rating vs number of reviews**: one dot per drug, colored by drug group, with a ranked-list alternative and numbered notes on standout drugs.
+- **Rating vs number of reviews**: one dot per drug, colored by drug group, with a ranked-list alternative.
 - **Ratings by drug class**: each drug plus its class's review-weighted average.
 - **Major depression vs bipolar disorder**: drugs rated for both conditions, sorted by the gap between them.
 - **All drugs**: a sortable table that includes drugs with no reviews yet.

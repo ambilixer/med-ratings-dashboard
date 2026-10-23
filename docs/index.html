@@ -733,6 +733,8 @@ milsaperidone,Total,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,
   const MINS = [0, 10, 25, 50, 100, 250];
   const DEFAULTS = { condition: 'Major depression', q: '', minReviews: 0, hidden: [], use: 'all', rx: 'all', xScale: 'linear', labels: true, ratingMode: 'raw', display: 'chart' };
   // Editorial notes, numbered on the chart. Text holds no figures; the chart and tooltips carry those.
+  // Turned off for now (Charlie, 2026-10-23). Set to true to bring back the numbered badges and notes.
+  const SHOW_CALLOUTS = false;
   const CALLOUTS = {
     'Major depression': [
       ['tramadol', 'An opioid pain medicine used off-label. It has the top rating among well-reviewed drugs, and other controlled substances such as benzodiazepines and stimulants also rate high.'],
@@ -1029,6 +1031,7 @@ milsaperidone,Total,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,
 
   // ---------- notes (callouts) ----------
   function activeNotes(p, visible) {
+    if (!SHOW_CALLOUTS) return [];
     const names = new Set(visible.map((d) => d.generic_name));
     return (CALLOUTS[p.condition] || []).filter(([g]) => names.has(g)).map(([g, text], i) => ({ g, text, num: i + 1 }));
   }
