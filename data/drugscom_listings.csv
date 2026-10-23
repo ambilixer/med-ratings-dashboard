@@ -1,0 +1,219 @@
+condition,listing_name,off_label,new_approval,rating,reviews,rx_otc,pregnancy_cat,csa_schedule,alcohol_interaction,generic_name,is_brand_listing
+Depression,bupropion,False,False,7.0,1409,Rx,C,N,True,bupropion,False
+Depression,sertraline,False,False,6.9,1296,Rx,C,N,True,sertraline,False
+Depression,Cymbalta,False,False,6.3,624,Rx,C,N,True,duloxetine,True
+Depression,Lexapro,False,False,7.2,633,Rx,C,N,True,escitalopram,True
+Depression,Zoloft,False,False,6.9,633,Rx,C,N,True,sertraline,True
+Depression,fluoxetine,False,False,7.0,748,Rx,C,N,True,fluoxetine,False
+Depression,citalopram,False,False,7.2,739,Rx,C,N,True,citalopram,False
+Depression,Wellbutrin XL,False,False,7.4,311,Rx,C,N,True,bupropion,True
+Depression,escitalopram,False,False,7.1,954,Rx,C,N,True,escitalopram,False
+Depression,Prozac,False,False,7.0,443,Rx,C,N,True,fluoxetine,True
+Depression,duloxetine,False,False,6.3,771,Rx,C,N,True,duloxetine,False
+Depression,venlafaxine,False,False,6.1,1044,Rx,C,N,True,venlafaxine,False
+Depression,Celexa,False,False,7.1,366,Rx,C,N,True,citalopram,True
+Depression,Rexulti,False,False,6.9,178,Rx,,N,True,brexpiprazole,True
+Depression,Abilify,False,False,6.5,349,Rx,C,N,True,aripiprazole,True
+Depression,armodafinil,True,False,8.2,47,Rx,C,4,False,armodafinil,False
+Depression,brexpiprazole,False,False,6.9,195,Rx,,N,True,brexpiprazole,False
+Depression,Effexor XR,False,False,6.5,363,Rx,C,N,True,venlafaxine,True
+Depression,trazodone,False,False,6.7,145,Rx,C,N,True,trazodone,False
+Depression,mirtazapine,False,False,6.7,672,Rx,C,N,True,mirtazapine,False
+Depression,Pristiq,False,False,6.9,803,Rx,C,N,True,desvenlafaxine,True
+Depression,amitriptyline,False,False,8.0,145,Rx,C,N,True,amitriptyline,False
+Depression,Effexor,False,False,5.5,344,Rx,C,N,True,venlafaxine,True
+Depression,lamotrigine,True,False,7.2,191,Rx,C,N,True,lamotrigine,False
+Depression,Paxil,False,False,6.4,196,Rx,D,N,True,paroxetine,True
+Depression,alprazolam,True,False,8.6,106,Rx,D,4,True,alprazolam,False
+Depression,Remeron,False,False,7.0,175,Rx,C,N,True,mirtazapine,True
+Depression,paroxetine,False,False,6.6,300,Rx,D,N,True,paroxetine,False
+Depression,tramadol,True,False,9.2,247,Rx,C,4,True,tramadol,False
+Depression,Wellbutrin SR,False,False,6.9,107,Rx,C,N,True,bupropion,True
+Depression,Viibryd,False,False,6.0,606,Rx,C,N,True,vilazodone,True
+Depression,aripiprazole,False,False,6.4,388,Rx,C,N,True,aripiprazole,False
+Depression,quetiapine,False,False,6.5,192,Rx,C,N,True,quetiapine,False
+Depression,Seroquel XR,False,False,7.2,52,Rx,C,N,True,quetiapine,True
+Depression,desvenlafaxine,False,False,6.9,877,Rx,C,N,True,desvenlafaxine,False
+Depression,Forfivo XL,False,False,10.0,1,Rx,C,N,True,bupropion,True
+Depression,Deplin,False,False,7.4,95,Rx,N,N,False,l-methylfolate,True
+Depression,methylphenidate,False,False,8.7,71,Rx,C,2,True,methylphenidate,False
+Depression,nefazodone,False,False,9.2,83,Rx,C,N,True,nefazodone,False
+Depression,nortriptyline,False,False,6.6,69,Rx,N,N,True,nortriptyline,False
+Depression,Zyprexa,False,False,5.1,86,Rx,C,N,True,olanzapine,True
+Depression,Budeprion SR,False,False,7.7,12,Rx,C,N,True,bupropion,True
+Depression,olanzapine,False,False,4.9,186,Rx,C,N,True,olanzapine,False
+Depression,risperidone,True,False,4.9,55,Rx,C,N,True,risperidone,False
+Depression,desipramine,False,False,9.1,18,Rx,N,N,True,desipramine,False
+Depression,Irenka,False,False,,0,Rx,C,N,True,duloxetine,True
+Depression,lithium,True,False,6.1,67,Rx,D,N,True,lithium,False
+Depression,modafinil,True,False,8.7,77,Rx,C,4,False,modafinil,False
+Depression,Raldesy,False,False,,0,Rx,C,N,True,trazodone,True
+Depression,Aplenzin,False,False,6.1,15,Rx,C,N,True,bupropion,True
+Depression,doxepin,False,False,7.2,31,Rx,N,N,True,doxepin,False
+Depression,Fetzima,False,False,4.9,91,Rx,C,N,True,levomilnacipran,True
+Depression,fluvoxamine,True,False,6.6,34,Rx,C,N,True,fluvoxamine,False
+Depression,l-methylfolate,False,False,7.6,140,Rx/OTC,N,N,False,l-methylfolate,False
+Depression,Methylin ER,False,False,9.5,2,Rx,C,2,True,methylphenidate,True
+Depression,niacin,True,False,8.3,59,Rx/OTC,C,N,True,niacin,False
+Depression,Norpramin,False,False,9.8,5,Rx,N,N,True,desipramine,True
+Depression,Remeron SolTab,False,False,8.8,5,Rx,C,N,True,mirtazapine,True
+Depression,vilazodone,False,False,6.0,635,Rx,C,N,True,vilazodone,False
+Depression,amitriptyline / chlordiazepoxide,False,False,9.6,5,Rx,N,4,True,amitriptyline / chlordiazepoxide,False
+Depression,amoxapine,False,False,9.6,5,Rx,C,N,True,amoxapine,False
+Depression,ketamine,True,False,8.1,38,Rx,N,3,True,ketamine,False
+Depression,lisdexamfetamine,True,False,8.7,36,Rx,C,2,True,lisdexamfetamine,False
+Depression,Nardil,False,False,8.2,113,Rx,C,N,True,phenelzine,True
+Depression,Parnate,False,False,8.5,107,Rx,N,N,True,tranylcypromine,True
+Depression,Paxil CR,False,False,7.4,14,Rx,D,N,True,paroxetine,True
+Depression,phenelzine,False,False,8.4,145,Rx,C,N,True,phenelzine,False
+Depression,Symbyax,False,False,8.8,19,Rx,C,N,True,fluoxetine / olanzapine,True
+Depression,tranylcypromine,False,False,8.4,131,Rx,N,N,True,tranylcypromine,False
+Depression,atomoxetine,True,False,6.5,8,Rx,C,N,False,atomoxetine,False
+Depression,clomipramine,True,False,7.2,52,Rx,C,N,True,clomipramine,False
+Depression,Emsam,False,False,7.9,34,Rx,C,N,True,selegiline,True
+Depression,fluoxetine / olanzapine,False,False,7.7,26,Rx,C,N,True,fluoxetine / olanzapine,False
+Depression,imipramine,False,False,6.9,34,Rx,N,N,True,imipramine,False
+Depression,Pamelor,False,False,4.8,12,Rx,N,N,True,nortriptyline,True
+Depression,st. john's wort,False,False,7.8,138,OTC,N,N,True,st. john's wort,False
+Depression,Zyprexa Zydis,False,False,,0,Rx,C,N,True,olanzapine,True
+Depression,amitriptyline / perphenazine,False,False,9.0,1,Rx,N,N,True,amitriptyline / perphenazine,False
+Depression,esketamine,False,False,5.5,75,Rx,,3,True,esketamine,False
+Depression,isocarboxazid,False,False,9.3,8,Rx,C,N,True,isocarboxazid,False
+Depression,levomilnacipran,False,False,5.0,102,Rx,C,N,True,levomilnacipran,False
+Depression,Marplan,False,False,9.3,8,Rx,C,N,True,isocarboxazid,True
+Depression,paliperidone,True,False,3.4,12,Rx,C,N,True,paliperidone,False
+Depression,protriptyline,False,False,9.0,4,Rx,N,N,True,protriptyline,False
+Depression,selegiline,False,False,8.1,44,Rx,C,N,True,selegiline,False
+Depression,Spravato,False,False,5.4,67,Rx,,3,True,esketamine,True
+Depression,thyroid desiccated,True,False,,0,Rx,A,N,False,thyroid desiccated,False
+Depression,Tofranil,False,False,6.9,8,Rx,N,N,True,imipramine,True
+Depression,trimipramine,False,False,9.5,2,Rx,C,N,True,trimipramine,False
+Depression,XaQuil XR,False,False,8.0,3,Rx,N,N,False,l-methylfolate,True
+Depression,gotu kola,True,False,,0,,N,U,False,gotu kola,False
+Depression,L-Methylfolate Forte,False,False,,0,Rx,N,N,False,l-methylfolate,True
+Depression,valerian,True,False,,0,OTC,N,N,True,valerian,False
+Major depressive disorder,Wellbutrin XL,False,False,7.4,132,Rx,C,N,True,bupropion,True
+Major depressive disorder,bupropion,False,False,6.9,458,Rx,C,N,True,bupropion,False
+Major depressive disorder,Zoloft,False,False,6.8,148,Rx,C,N,True,sertraline,True
+Major depressive disorder,Trintellix,False,False,6.1,501,Rx,C,N,True,vortioxetine,True
+Major depressive disorder,Prozac,False,False,6.5,106,Rx,C,N,True,fluoxetine,True
+Major depressive disorder,Lexapro,False,False,6.6,124,Rx,C,N,True,escitalopram,True
+Major depressive disorder,Rexulti,False,False,6.6,281,Rx,,N,True,brexpiprazole,True
+Major depressive disorder,sertraline,False,False,6.8,240,Rx,C,N,True,sertraline,False
+Major depressive disorder,Auvelity,False,False,8.4,196,Rx,,N,True,bupropion / dextromethorphan,True
+Major depressive disorder,Caplyta,False,True,7.2,9,Rx,,N,True,lumateperone,True
+Major depressive disorder,Cymbalta,False,False,6.2,124,Rx,C,N,True,duloxetine,True
+Major depressive disorder,Vraylar,False,False,7.0,95,Rx,,N,True,cariprazine,True
+Major depressive disorder,Abilify,False,False,6.2,145,Rx,C,N,True,aripiprazole,True
+Major depressive disorder,trazodone,False,False,6.5,36,Rx,C,N,True,trazodone,False
+Major depressive disorder,Pristiq,False,False,6.3,169,Rx,C,N,True,desvenlafaxine,True
+Major depressive disorder,bupropion / dextromethorphan,False,False,8.4,199,Rx,,N,True,bupropion / dextromethorphan,False
+Major depressive disorder,Effexor XR,False,False,6.5,125,Rx,C,N,True,venlafaxine,True
+Major depressive disorder,brexpiprazole,False,False,6.5,295,Rx,,N,True,brexpiprazole,False
+Major depressive disorder,duloxetine,False,False,6.2,158,Rx,C,N,True,duloxetine,False
+Major depressive disorder,fluoxetine,False,False,6.7,146,Rx,C,N,True,fluoxetine,False
+Major depressive disorder,mirtazapine,False,False,7.0,199,Rx,C,N,True,mirtazapine,False
+Major depressive disorder,venlafaxine,False,False,6.4,273,Rx,C,N,True,venlafaxine,False
+Major depressive disorder,cariprazine,False,False,7.0,100,Rx,,N,True,cariprazine,False
+Major depressive disorder,escitalopram,False,False,6.6,180,Rx,C,N,True,escitalopram,False
+Major depressive disorder,Remeron,False,False,7.4,66,Rx,C,N,True,mirtazapine,True
+Major depressive disorder,Wellbutrin SR,False,False,7.9,25,Rx,C,N,True,bupropion,True
+Major depressive disorder,lumateperone,False,False,7.5,10,Rx,,N,True,lumateperone,False
+Major depressive disorder,Viibryd,False,False,5.5,226,Rx,C,N,True,vilazodone,True
+Major depressive disorder,Effexor,False,False,5.8,65,Rx,C,N,True,venlafaxine,True
+Major depressive disorder,aripiprazole,False,False,6.3,165,Rx,C,N,True,aripiprazole,False
+Major depressive disorder,quetiapine,False,False,6.6,62,Rx,C,N,True,quetiapine,False
+Major depressive disorder,Seroquel XR,False,False,6.4,16,Rx,C,N,True,quetiapine,True
+Major depressive disorder,nefazodone,False,False,9.0,33,Rx,C,N,True,nefazodone,False
+Major depressive disorder,Paxil,False,False,7.2,36,Rx,D,N,True,paroxetine,True
+Major depressive disorder,vortioxetine,False,False,6.3,647,Rx,C,N,True,vortioxetine,False
+Major depressive disorder,desvenlafaxine,False,False,6.2,195,Rx,C,N,True,desvenlafaxine,False
+Major depressive disorder,paroxetine,False,False,7.5,56,Rx,D,N,True,paroxetine,False
+Major depressive disorder,Zyprexa,False,False,5.2,25,Rx,C,N,True,olanzapine,True
+Major depressive disorder,Aplenzin,False,False,8.6,8,Rx,C,N,True,bupropion,True
+Major depressive disorder,doxepin,False,False,7.6,5,Rx,N,N,True,doxepin,False
+Major depressive disorder,Fetzima,False,False,5.2,109,Rx,C,N,True,levomilnacipran,True
+Major depressive disorder,olanzapine,False,False,5.8,53,Rx,C,N,True,olanzapine,False
+Major depressive disorder,Paxil CR,False,False,10.0,3,Rx,D,N,True,paroxetine,True
+Major depressive disorder,vilazodone,False,False,5.6,250,Rx,C,N,True,vilazodone,False
+Major depressive disorder,Budeprion SR,False,False,6.0,2,Rx,C,N,True,bupropion,True
+Major depressive disorder,Spravato,False,False,6.9,63,Rx,,3,True,esketamine,True
+Major depressive disorder,Irenka,False,False,,0,Rx,C,N,True,duloxetine,True
+Major depressive disorder,fluoxetine / olanzapine,False,False,7.8,12,Rx,C,N,True,fluoxetine / olanzapine,False
+Major depressive disorder,Forfivo XL,False,False,,0,Rx,C,N,True,bupropion,True
+Major depressive disorder,Raldesy,False,False,,0,Rx,C,N,True,trazodone,True
+Major depressive disorder,Zyprexa Zydis,False,False,8.0,2,Rx,C,N,True,olanzapine,True
+Major depressive disorder,Remeron SolTab,False,False,7.0,1,Rx,C,N,True,mirtazapine,True
+Major depressive disorder,Emsam,False,False,6.6,16,Rx,C,N,True,selegiline,True
+Major depressive disorder,esketamine,False,False,6.8,67,Rx,,3,True,esketamine,False
+Major depressive disorder,Opipza,False,False,,0,Rx,C,N,True,aripiprazole,True
+Major depressive disorder,Symbyax,False,False,7.0,8,Rx,C,N,True,fluoxetine / olanzapine,True
+Major depressive disorder,levomilnacipran,False,False,5.2,112,Rx,C,N,True,levomilnacipran,False
+Major depressive disorder,selegiline,False,False,6.5,17,Rx,C,N,True,selegiline,False
+Major depressive disorder,Exxua,False,False,,0,Rx,,N,False,gepirone,True
+Major depressive disorder,gepirone,False,False,10.0,1,Rx,,N,False,gepirone,False
+Bipolar disorder,Lamlique,False,True,,0,Rx,C,N,True,lamotrigine,True
+Bipolar disorder,Lamictal,False,False,8.1,674,Rx,C,N,True,lamotrigine,True
+Bipolar disorder,lamotrigine,False,False,8.0,1112,Rx,C,N,True,lamotrigine,False
+Bipolar disorder,Bysanti,False,True,,0,Rx,,N,True,milsaperidone,True
+Bipolar disorder,Seroquel,False,False,6.9,418,Rx,C,N,True,quetiapine,True
+Bipolar disorder,Vraylar,False,False,6.0,440,Rx,,N,True,cariprazine,True
+Bipolar disorder,Abilify,False,False,5.7,364,Rx,C,N,True,aripiprazole,True
+Bipolar disorder,Caplyta,False,False,6.9,145,Rx,,N,True,lumateperone,True
+Bipolar disorder,lithium,False,False,7.3,366,Rx,D,N,True,lithium,False
+Bipolar disorder,armodafinil,True,False,9.3,15,Rx,C,4,False,armodafinil,False
+Bipolar disorder,cariprazine,False,False,6.2,487,Rx,,N,True,cariprazine,False
+Bipolar disorder,iloperidone,False,False,9.3,18,Rx,C,N,True,iloperidone,False
+Bipolar disorder,Lybalvi,False,False,7.3,22,Rx,,N,True,olanzapine / samidorphan,True
+Bipolar disorder,Latuda,False,False,6.3,677,Rx,B,N,True,lurasidone,True
+Bipolar disorder,olanzapine / samidorphan,False,False,7.4,24,Rx,,N,True,olanzapine / samidorphan,False
+Bipolar disorder,quetiapine,False,False,7.1,729,Rx,C,N,True,quetiapine,False
+Bipolar disorder,lumateperone,False,False,6.9,150,Rx,,N,True,lumateperone,False
+Bipolar disorder,Fanapt,False,False,7.8,4,Rx,C,N,True,iloperidone,True
+Bipolar disorder,gabapentin,True,False,8.5,145,Rx,C,N,True,gabapentin,False
+Bipolar disorder,bupropion,True,False,7.3,93,Rx,C,N,True,bupropion,False
+Bipolar disorder,Depakote,False,False,6.3,198,Rx,D,N,True,divalproex sodium,True
+Bipolar disorder,clonazepam,True,False,8.8,100,Rx,D,4,True,clonazepam,False
+Bipolar disorder,aripiprazole,False,False,5.7,461,Rx,C,N,True,aripiprazole,False
+Bipolar disorder,divalproex sodium,False,False,6.6,289,Rx,D,N,True,divalproex sodium,False
+Bipolar disorder,sertraline,True,False,6.8,55,Rx,C,N,True,sertraline,False
+Bipolar disorder,oxcarbazepine,True,False,8.1,171,Rx,C,N,True,oxcarbazepine,False
+Bipolar disorder,Seroquel XR,False,False,7.3,114,Rx,C,N,True,quetiapine,True
+Bipolar disorder,topiramate,True,False,7.1,136,Rx,D,N,True,topiramate,False
+Bipolar disorder,Risperdal,False,False,6.3,90,Rx,C,N,True,risperidone,True
+Bipolar disorder,risperidone,False,False,6.1,187,Rx,C,N,True,risperidone,False
+Bipolar disorder,Geodon,False,False,5.7,244,Rx,C,N,True,ziprasidone,True
+Bipolar disorder,olanzapine,False,False,6.4,338,Rx,C,N,True,olanzapine,False
+Bipolar disorder,Zyprexa,False,False,6.3,179,Rx,C,N,True,olanzapine,True
+Bipolar disorder,duloxetine,True,False,6.8,51,Rx,C,N,True,duloxetine,False
+Bipolar disorder,venlafaxine,True,False,6.7,77,Rx,C,N,True,venlafaxine,False
+Bipolar disorder,Depakote ER,False,False,7.5,51,Rx,D,N,True,divalproex sodium,True
+Bipolar disorder,escitalopram,True,False,6.4,61,Rx,C,N,True,escitalopram,False
+Bipolar disorder,carbamazepine,False,False,7.2,113,Rx,D,N,True,carbamazepine,False
+Bipolar disorder,citalopram,True,False,8.5,14,Rx,C,N,True,citalopram,False
+Bipolar disorder,Saphris,False,False,7.3,232,Rx,C,N,True,asenapine,True
+Bipolar disorder,lurasidone,False,False,6.3,734,Rx,B,N,True,lurasidone,False
+Bipolar disorder,ziprasidone,False,False,5.8,302,Rx,C,N,True,ziprasidone,False
+Bipolar disorder,clonidine,True,False,7.6,10,Rx,C,N,True,clonidine,False
+Bipolar disorder,fluoxetine / olanzapine,False,False,7.5,48,Rx,C,N,True,fluoxetine / olanzapine,False
+Bipolar disorder,Lamictal ODT,False,False,9.0,3,Rx,C,N,True,lamotrigine,True
+Bipolar disorder,levetiracetam,True,False,6.6,8,Rx,C,N,True,levetiracetam,False
+Bipolar disorder,Symbyax,False,False,7.7,38,Rx,C,N,True,fluoxetine / olanzapine,True
+Bipolar disorder,tiagabine,True,False,10.0,3,Rx,C,N,True,tiagabine,False
+Bipolar disorder,valproic acid,False,False,6.1,30,Rx,D,N,True,valproic acid,False
+Bipolar disorder,Abilify Maintena,False,False,6.0,25,Rx,C,N,True,aripiprazole,True
+Bipolar disorder,asenapine,False,False,7.2,254,Rx,C,N,True,asenapine,False
+Bipolar disorder,desvenlafaxine,True,False,7.0,22,Rx,C,N,True,desvenlafaxine,False
+Bipolar disorder,Subvenite,False,False,,0,Rx,C,N,True,lamotrigine,True
+Bipolar disorder,Zyprexa Zydis,False,False,7.4,7,Rx,C,N,True,olanzapine,True
+Bipolar disorder,Abilify Asimtufii,False,False,8.0,1,Rx,C,N,True,aripiprazole,True
+Bipolar disorder,Equetro,False,False,6.0,5,Rx,D,N,True,carbamazepine,True
+Bipolar disorder,Lamictal CD,False,False,2.0,1,Rx,C,N,True,lamotrigine,True
+Bipolar disorder,Lithobid,False,False,6.7,15,Rx,D,N,True,lithium,True
+Bipolar disorder,paliperidone,True,False,4.8,58,Rx,C,N,True,paliperidone,False
+Bipolar disorder,perphenazine,True,False,7.2,13,Rx,N,N,True,perphenazine,False
+Bipolar disorder,Risperdal Consta,False,False,2.2,5,Rx,C,N,True,risperidone,True
+Bipolar disorder,Rykindo,False,False,,0,Rx,C,N,True,risperidone,True
+Bipolar disorder,Uzedy,False,False,,0,Rx,C,N,True,risperidone,True
+Bipolar disorder,verapamil,True,False,8.0,1,Rx,C,N,True,verapamil,False
+Bipolar disorder,milsaperidone,False,False,,0,Rx,,N,True,milsaperidone,False

@@ -1,0 +1,1058 @@
+<style>
+.dx { display: grid; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.dx [hidden] { display: none !important; }
+.dx-head { display: grid; gap: var(--cds-gap-xs); max-width: 70ch; }
+.dx-title { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.2; text-wrap: balance; }
+.dx-lede { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); line-height: 1.5; }
+
+.dx-bar { display: grid; gap: var(--cds-gap-sm); }
+.dx-primary { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--cds-gap-md); }
+.dx-more { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--cds-gap-md); }
+.dx-more-btn { display: none; }
+.dx-count { font-variant-numeric: tabular-nums; }
+.dx-field { display: grid; gap: var(--cds-gap-xs); min-width: 0; }
+.dx-field > span { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.dx-input, .dx-select { font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); min-height: 2rem; }
+.dx-input { width: 14rem; max-width: 100%; }
+.dx-input:focus-visible, .dx-select:focus-visible, .dx-btn:focus-visible, .dx-chip:focus-visible, .dx-ghead:focus-visible, .dx-sort:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.dx-seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); overflow: hidden; background: var(--color-panel); }
+.dx-seg .dx-btn { border: 0; border-radius: 0; border-inline-end: 1px solid var(--color-border-line); white-space: nowrap; }
+.dx-seg .dx-btn:last-child { border-inline-end: 0; }
+.dx-btn { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); background: transparent; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); min-height: 2rem; cursor: pointer; font-variant-numeric: tabular-nums; }
+.dx-btn[aria-pressed="true"] { color: var(--color-fg); background: var(--color-bg); font-weight: var(--cds-font-weight-medium); }
+.dx-btn:hover { color: var(--color-fg); }
+.dx-more-btn[aria-expanded="true"] { color: var(--color-fg); background: var(--color-bg); }
+.dx-check { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg); min-height: 2rem; cursor: pointer; }
+
+.dx-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-md); min-width: 0; }
+.dx-card-head { display: grid; gap: var(--cds-gap-xs); }
+.dx-card-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--cds-gap-sm); }
+.dx-h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.dx-note { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.5; max-width: 80ch; }
+
+.dx-legend-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--cds-gap-xs) var(--cds-gap-md); }
+.dx-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--cds-gap-md); }
+.dx-ghead { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: transparent; border: 0; padding: var(--cds-pad-xs) 0; display: inline-flex; align-items: center; gap: var(--cds-gap-xs); cursor: pointer; min-height: 2rem; }
+.dx-ghead:hover { text-decoration: underline; text-underline-offset: 3px; }
+.dx-key { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg); min-height: 1.5rem; }
+.dx-link { border: 0; padding-inline: 0; color: var(--color-fg-muted); text-decoration: underline; text-underline-offset: 3px; }
+.dx-link[aria-expanded="true"] { color: var(--color-fg); }
+.dx-classes { display: grid; gap: var(--cds-gap-sm); padding: var(--cds-pad-sm) var(--cds-pad-md); background: var(--color-bg); border-radius: var(--cds-radius); }
+.dx-cgroup { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-xs); }
+.dx-cgroup-name { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); min-width: 13rem; }
+.dx-chip { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: transparent; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 2px var(--cds-pad-sm) 2px var(--cds-pad-xs); display: inline-flex; align-items: center; gap: var(--cds-gap-xs); cursor: pointer; min-height: 1.75rem; }
+.dx-chip[aria-pressed="false"] { color: var(--color-fg-muted); text-decoration: line-through; }
+.dx-sw { width: .625rem; height: .625rem; border-radius: 50%; flex: none; border: 1.5px solid transparent; }
+.dx-chip[aria-pressed="false"] .dx-sw, .dx-ghead[data-state="off"] .dx-sw { background: transparent !important; border-color: var(--color-fg-muted); }
+.dx-ghead[data-state="off"] { color: var(--color-fg-muted); }
+
+.dx-chart { position: relative; min-height: 320px; }
+.dx-rowchart { position: relative; }
+.dx-rowchart.dash-skeleton { min-height: 240px; }
+.dx-empty { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.dx-svg { display: block; overflow: visible; }
+.dx-svg .dx-tick { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
+.dx-svg .dx-axis-title { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.dx-svg .dx-grid { stroke: var(--cds-chart-grid); stroke-width: 1; }
+.dx-svg .dx-axis { stroke: var(--cds-chart-axis); stroke-width: 1; }
+.dx-svg .dx-dot { stroke: var(--color-panel); stroke-width: 1.5; transition: opacity var(--cds-dur-slow); }
+.dx-svg .dx-dot.is-dim { opacity: .16; }
+.dx-svg .dx-label { fill: var(--color-fg); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); paint-order: stroke; stroke: var(--color-panel); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+.dx-svg .dx-label.is-match { font-weight: var(--cds-font-weight-medium); }
+.dx-svg .dx-ring { fill: none; stroke: var(--color-fg); stroke-width: 1.5; pointer-events: none; }
+.dx-svg .dx-badge { fill: var(--color-fg); stroke: var(--color-panel); stroke-width: 1.5; }
+.dx-svg .dx-badge-t { fill: var(--color-panel); font-size: 11px; font-weight: var(--cds-font-weight-medium); font-family: var(--font-anthropic-sans); pointer-events: none; }
+.dx-svg .dx-rowlab { fill: var(--color-fg); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.dx-svg .dx-rowval { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
+.dx-svg .dx-track { stroke: var(--cds-chart-grid); stroke-width: 1; }
+.dx-svg .dx-avg { fill: var(--color-fg); }
+.dx-svg .dx-gap { stroke: var(--cds-chart-muted); stroke-width: 2; stroke-linecap: round; }
+@media (prefers-reduced-motion: no-preference) {
+  .dx-svg.is-intro .dx-dot { animation: dx-in var(--cds-dur-slow) var(--cds-ease-out) both; }
+  @keyframes dx-in { from { opacity: 0; } }
+}
+.dx-tip { position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); line-height: 1.45; max-width: 17rem; display: grid; gap: var(--cds-gap-sm); }
+.dx-tip-name { font-weight: var(--cds-font-weight-medium); color: var(--color-fg); }
+.dx-tip-sub { color: var(--cds-text-secondary); }
+.dx-tip-row { display: flex; align-items: center; gap: var(--cds-gap-xs); color: var(--color-fg); }
+.dx-tip-num { font-variant-numeric: tabular-nums; color: var(--color-fg); }
+.dx-status { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.dx-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: inherit; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.dx-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+
+.dx-notes { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-sm); }
+.dx-notes li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--cds-gap-sm); align-items: start; font-size: var(--cds-font-size-caption); line-height: 1.5; color: var(--color-fg-muted); max-width: 80ch; }
+.dx-notes strong { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.dx-num { display: inline-grid; place-items: center; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--color-fg); color: var(--color-panel); font-size: 11px; font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; flex: none; }
+
+.dx-list { list-style: none; margin: 0; padding: 0; min-height: 320px; }
+.dx-li { display: grid; grid-template-columns: 2.25rem minmax(0, 1fr) 3.25rem minmax(7rem, 11rem); align-items: center; gap: var(--cds-gap-sm); padding: var(--cds-pad-xs) 0; border-bottom: 1px solid var(--color-border-line); font-variant-numeric: tabular-nums; }
+.dx-li:hover { background: var(--color-bg); }
+.dx-rank { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); text-align: right; }
+.dx-li-main { min-width: 0; display: grid; gap: 2px; }
+.dx-li-name { display: flex; align-items: center; gap: var(--cds-gap-xs); font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-body); min-width: 0; }
+.dx-li-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dx-li-sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dx-li-rating { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); text-align: right; }
+.dx-li-rev { display: grid; gap: 2px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.dx-meter { display: block; height: 6px; border-radius: 3px; background: var(--color-bg); overflow: hidden; }
+.dx-meter > span { display: block; height: 100%; border-radius: 3px; background: var(--cds-chart-muted); }
+
+.dx-table-wrap { max-height: 32rem; overflow: auto; }
+.dx-table-wrap.dash-skeleton { min-height: 8rem; }
+.dx-rows-btn { justify-self: start; }
+.dx-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.dx-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); border-bottom: 1px solid var(--color-border-line); padding: 0; z-index: 1; }
+.dx-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.dx-table .is-num { text-align: right; }
+.dx-sort { font: inherit; color: var(--color-fg-muted); background: transparent; border: 0; padding: var(--cds-pad-xs) var(--cds-pad-sm); width: 100%; text-align: inherit; cursor: pointer; white-space: nowrap; }
+.dx-table th[aria-sort] .dx-sort { color: var(--color-fg); }
+.dx-table th[aria-sort="ascending"] .dx-sort::after { content: " \2191"; }
+.dx-table th[aria-sort="descending"] .dx-sort::after { content: " \2193"; }
+.dx-table tbody tr:hover td { background: var(--color-bg); }
+.dx-drug { font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
+.dx-drug-sub { display: flex; align-items: center; gap: var(--cds-gap-xs); font-weight: 400; color: var(--color-fg-muted); white-space: normal; margin-top: 2px; }
+.dx-label-col { white-space: nowrap; }
+.dx-brands { color: var(--color-fg-muted); min-width: 12rem; }
+.dx-cls { white-space: nowrap; }
+.dx-cls .dx-sw { display: inline-block; margin-inline-end: var(--cds-gap-xs); vertical-align: -1px; }
+.dx-off { color: var(--color-fg-muted); }
+@media (max-width: 640px) {
+  .dx-hide-narrow { display: none; }
+  .dx-table.mode-raw .dx-col-adj, .dx-table.mode-adj .dx-col-raw { display: none; }
+  .dx-table-wrap { max-height: none; overflow-x: auto; overflow-y: visible; }
+}
+
+.dx-about { max-width: 75ch; }
+.dx-about-body { display: grid; gap: var(--cds-gap-xs); padding-top: var(--cds-pad-sm); }
+.dx-about summary { cursor: pointer; font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); color: var(--color-fg); min-height: 2rem; display: flex; align-items: center; gap: var(--cds-gap-xs); list-style: none; }
+.dx-about summary::-webkit-details-marker { display: none; }
+.dx-about summary::before { content: "\25B8"; color: var(--color-fg-muted); transition: transform var(--cds-dur-slow); }
+.dx-about[open] summary::before { transform: rotate(90deg); }
+.dx-about summary:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.dx-about p { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.55; }
+.dx-about strong { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+
+/* Narrow screens: secondary filters fold behind a Filters button */
+@media (max-width: 899px) {
+  .dx-more-btn { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .dx-more { display: none; padding: var(--cds-pad-md); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+  .dx-more.is-open { display: flex; }
+}
+@media (max-width: 640px) {
+  .dx { gap: var(--cds-gap-md); }
+  .dx-primary { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--cds-gap-sm); }
+  .dx-f-cond { grid-column: 1 / -1; }
+  .dx-select, .dx-input { width: 100%; }
+  .dx-more { display: none; }
+  .dx-more.is-open { display: grid; grid-template-columns: 1fr 1fr; gap: var(--cds-gap-md); }
+  .dx-more .dx-f-wide { grid-column: 1 / -1; }
+  .dx-seg { display: flex; }
+  .dx-seg .dx-btn { flex: 1; }
+  .dx-card { padding: var(--cds-pad-md); }
+  .dx-cgroup-name { min-width: 0; width: 100%; }
+  .dx-li { grid-template-columns: 1.75rem minmax(0, 1fr) 3rem; grid-template-areas: "rank main rating" ". rev rev"; row-gap: var(--cds-gap-xs); }
+  .dx-rank { grid-area: rank; }
+  .dx-li-main { grid-area: main; }
+  .dx-li-rating { grid-area: rating; }
+  .dx-li-rev { grid-area: rev; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--cds-gap-sm); }
+}
+@media (pointer: coarse) {
+  .dx-btn, .dx-select, .dx-input, .dx-ghead { min-height: 2.75rem; }
+  .dx-chip { min-height: 2.25rem; }
+}
+</style>
+
+<div class="dx">
+  <header class="dx-head" id="dx-top">
+    <h1 class="dx-title">Depression medication ratings</h1>
+    <p class="dx-lede">How patients on Drugs.com rate each drug, against how many of them reviewed it. The most-reviewed antidepressants cluster mid-scale, while the highest ratings mostly come from older or off-label drugs with far fewer reviews.</p>
+  </header>
+
+  <div class="dx-bar" id="dx-filters">
+   <div class="dx-primary">
+    <label class="dx-field dx-f-cond"><span>Reviews for</span>
+      <select class="dx-select" id="dx-cond" data-source="drugs"></select></label>
+    <label class="dx-field"><span>Find a drug</span><input class="dx-input" id="dx-q" type="search" placeholder="Generic or brand name" autocomplete="off"></label>
+    <button class="dx-btn dx-more-btn" id="dx-more-btn" type="button" aria-expanded="false" aria-controls="dx-more">Filters<span class="dx-count" id="dx-more-count"></span></button>
+   </div>
+   <div class="dx-more" id="dx-more">
+    <div class="dx-field dx-f-wide"><span id="dx-mode-label">Rating shown</span>
+      <div class="dx-seg" id="dx-mode" role="group" aria-labelledby="dx-mode-label"><button class="dx-btn" type="button" data-v="raw">Patient average</button><button class="dx-btn" type="button" data-v="adj">Adjusted for review count</button></div></div>
+    <div class="dx-field dx-f-wide"><span id="dx-min-label">Minimum reviews</span><div class="dx-seg" id="dx-min" role="group" aria-labelledby="dx-min-label"></div></div>
+    <label class="dx-field"><span>Label status</span>
+      <select class="dx-select" id="dx-use"><option value="all">All</option><option value="On-label">On-label</option><option value="Off-label">Off-label</option></select></label>
+    <label class="dx-field"><span>Rx / OTC</span>
+      <select class="dx-select" id="dx-rx"><option value="all">All</option><option value="Rx">Rx</option><option value="OTC">OTC</option><option value="Rx/OTC">Rx/OTC</option></select></label>
+    <div class="dx-field dx-f-wide"><span id="dx-scale-label">Reviews axis</span>
+      <div class="dx-seg" id="dx-scale" role="group" aria-labelledby="dx-scale-label"><button class="dx-btn" type="button" data-v="log">Log</button><button class="dx-btn" type="button" data-v="linear">Linear</button></div></div>
+    <label class="dx-check"><input type="checkbox" id="dx-labels"> Name labels</label>
+    <button class="dx-btn" type="button" id="dx-reset">Reset filters</button>
+   </div>
+  </div>
+
+  <section class="dx-card" id="dx-main-card">
+    <div class="dx-card-head">
+      <div class="dx-card-top">
+        <h2 class="dx-h2" id="dx-main-title">Rating vs number of reviews</h2>
+        <div class="dx-seg" id="dx-display" role="group" aria-label="Show as"><button class="dx-btn" type="button" data-v="chart">Chart</button><button class="dx-btn" type="button" data-v="list">Ranked list</button></div>
+      </div>
+      <p class="dx-note" id="dx-main-note">Each dot is one drug, with its generic and brand-name listings combined. Hover or tap a dot for details. Tap a group to hide or show it.</p>
+    </div>
+    <div class="dx-legend-row">
+      <div class="dx-legend" id="dx-legend" data-source="drugs"></div>
+      <button class="dx-btn dx-link" id="dx-cls-btn" type="button" aria-expanded="false" aria-controls="dx-classes">Filter by drug class<span class="dx-count" id="dx-cls-count"></span></button>
+    </div>
+    <div class="dx-classes" id="dx-classes" data-source="drugs" hidden></div>
+    <div class="dx-chart dash-skeleton" id="dx-chart" data-source="drugs adjusted"></div>
+    <ol class="dx-list" id="dx-list" data-source="drugs adjusted" hidden></ol>
+    <button class="dx-btn dx-rows-btn" id="dx-list-btn" type="button" hidden></button>
+    <ol class="dx-notes" id="dx-notes" aria-label="Notes on highlighted drugs"></ol>
+    <p class="dx-status" id="dx-status"></p>
+  </section>
+
+  <section class="dx-card" id="dx-class-card">
+    <div class="dx-card-head">
+      <h2 class="dx-h2" id="dx-class-title">Ratings by drug class</h2>
+      <p class="dx-note">Each dot is a drug and the dark bar is the class average, weighted by review count, so heavily reviewed drugs count for more. Uses every rated drug in the selected view; only the group and class filters apply.</p>
+    </div>
+    <div class="dx-rowchart dash-skeleton" id="dx-class-chart" data-source="class_summary drugs adjusted"></div>
+  </section>
+
+  <section class="dx-card" id="dx-compare-card">
+    <div class="dx-card-head">
+      <h2 class="dx-h2" id="dx-compare-title">Major depression vs bipolar disorder</h2>
+      <p class="dx-note">Drugs rated for both conditions, sorted by the gap. The number on the right is the bipolar rating minus the major depression rating.</p>
+      <div class="dx-legend" id="dx-compare-legend"></div>
+    </div>
+    <div class="dx-rowchart dash-skeleton" id="dx-compare-chart" data-source="compare"></div>
+  </section>
+
+  <section class="dx-card" id="dx-table-card">
+    <div class="dx-card-head">
+      <h2 class="dx-h2" id="dx-table-title">All drugs</h2>
+      <p class="dx-note">Follows the filters above and includes drugs with no reviews yet. Tap a column to sort.</p>
+    </div>
+    <div class="dx-table-wrap dash-skeleton" id="dx-table-wrap">
+      <table class="dx-table mode-raw" data-source="drugs" data-row-key="generic_name,condition" aria-labelledby="dx-table-title">
+        <thead><tr>
+          <th data-field="generic_name"><button class="dx-sort" type="button" data-sort="generic_name">Drug</button></th>
+          <th data-field="brand_names" class="dx-hide-narrow"><button class="dx-sort" type="button" data-sort="brand_names">Brand names</button></th>
+          <th data-field="drug_class" class="dx-hide-narrow"><button class="dx-sort" type="button" data-sort="drug_class">Class</button></th>
+          <th data-field="rating" class="is-num dx-col-raw"><button class="dx-sort" type="button" data-sort="rating">Rating</button></th>
+          <th data-field="adj_rating" data-source="adjusted" class="is-num dx-col-adj"><button class="dx-sort" type="button" data-sort="adj_rating">Adjusted</button></th>
+          <th data-field="reviews" class="is-num"><button class="dx-sort" type="button" data-sort="reviews">Reviews</button></th>
+          <th data-field="rx_otc" class="dx-hide-narrow"><button class="dx-sort" type="button" data-sort="rx_otc">Rx/OTC</button></th>
+          <th data-field="label_status" class="dx-hide-narrow"><button class="dx-sort" type="button" data-sort="label_status">Label</button></th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button class="dx-btn dx-rows-btn" id="dx-rows-btn" type="button" hidden></button>
+  </section>
+
+  <details class="dx-about" id="dx-about">
+   <summary>About this data</summary>
+   <div class="dx-about-body">
+    <p><strong>Source.</strong> Drugs.com lists of drugs used to treat Depression, Major Depressive Disorder and Bipolar Disorder, copied on Oct 22 and 23, 2026. Ratings are patients' own scores out of 10 for that drug when used for that condition. Drugs.com's bipolar category covers bipolar disorder as a whole, not only its depressive episodes.</p>
+    <p><strong>Brand names.</strong> On Drugs.com, a generic drug's listing already includes the reviews of its brand-name versions (sertraline's count includes Zoloft's), so each drug's rating and review count come from its generic listing. Adding the brand listings on top would count those reviews twice.</p>
+    <p><strong>Views.</strong> Major depression combines Drugs.com's Depression and Major Depressive Disorder categories. Bipolar disorder is Drugs.com's Bipolar Disorder category, whose reviews are mostly about antipsychotics and mood stabilizers. Total combines both. Each review is filed under one condition, so combining adds the review counts and averages the ratings weighted by review count. Because Drugs.com rounds ratings to one decimal, a combined rating can differ from an exact recount by about 0.05.</p>
+    <p><strong>Adjusted rating.</strong> A drug with five glowing reviews shouldn't outrank one with a thousand good ones. The adjusted rating treats every drug as if it also had 25 reviews at the average rating for the selected view: (reviews × rating + 25 × view average) ÷ (reviews + 25). A drug with a handful of reviews moves most of the way toward the average; one with hundreds barely moves.</p>
+    <p><strong>Drug class.</strong> Class and group were assigned by Claude, not taken from Drugs.com. Off-label means Drugs.com flags the drug as not approved for that condition; in a combined view, a drug counts as off-label only if it is off-label for every condition included.</p>
+    <p><strong>Reading the ratings.</strong> Reviews are self-selected and lean toward strong reactions, so treat ratings as patient sentiment rather than a measure of how well a drug works. Controlled substances such as opioids, benzodiazepines and stimulants rate high here, which may reflect how they feel to take as much as how they treat the condition.</p>
+   </div>
+  </details>
+</div>
+
+<script>
+(() => {
+  const ID = 'drugs';
+  const GROUPS = ['Antidepressant', 'Antipsychotic', 'Mood stabilizer / anticonvulsant', 'Other prescription', 'Supplement'];
+  const VIEWS = [
+    ['Total', 'Total (major depression + bipolar disorder)'],
+    ['Major depression', 'Major depression'],
+    ['Bipolar disorder', 'Bipolar disorder'],
+  ];
+  const VIEW_PARTS = { // combined views and the views their tooltip breaks down into
+    'Total': ['Major depression', 'Bipolar disorder'],
+    'Major depression': [],
+  };
+  const MINS = [0, 10, 25, 50, 100, 250];
+  const DEFAULTS = { condition: 'Major depression', q: '', minReviews: 0, hidden: [], use: 'all', rx: 'all', xScale: 'log', labels: true, ratingMode: 'raw', display: 'chart' };
+  // Editorial notes, numbered on the chart. Text holds no figures; the chart and tooltips carry those.
+  const CALLOUTS = {
+    'Major depression': [
+      ['tramadol', 'An opioid pain medicine used off-label. It has the top rating among well-reviewed drugs, and other controlled substances such as benzodiazepines and stimulants also rate high.'],
+      ['bupropion / dextromethorphan', 'Auvelity, one of the newest antidepressants here, is among the best-rated drugs with a solid number of reviews.'],
+      ['bupropion', 'The most-reviewed drug, rated close to the overall average.'],
+      ['levomilnacipran', 'Fetzima is the lowest-rated antidepressant with a meaningful number of reviews.'],
+    ],
+    'Bipolar disorder': [
+      ['lamotrigine', 'The most-reviewed bipolar drug, and still among the best rated.'],
+      ['clonazepam', 'A benzodiazepine used off-label. It and gabapentin, also off-label, are the top-rated well-reviewed options.'],
+      ['aripiprazole', 'Abilify is the lowest-rated of the heavily reviewed bipolar drugs.'],
+    ],
+    'Total': [
+      ['bupropion', 'The most-reviewed drug overall. Nearly all of its reviews are for depression.'],
+      ['lamotrigine', 'Most of its reviews are for bipolar disorder, where patients rate it higher than for depression.'],
+      ['tramadol', 'An opioid pain medicine used off-label, with the top rating among well-reviewed drugs.'],
+    ],
+  };
+
+  // ---------- calculations (readers can inspect these in Sources) ----------
+  dash.calc('adjusted', {
+    inputs: ['drugs'],
+    title: 'Adjusted rating',
+    description: 'Each rating pulled toward its view\'s review-weighted average, as if the drug had 25 more reviews at that average.',
+    fn: (drugs) => {
+      const PRIOR_REVIEWS = 25;
+      const rated = drugs.filter((d) => d.rating !== '' && d.rating != null && Number(d.reviews) > 0);
+      const sums = {};
+      rated.forEach((d) => {
+        const s = sums[d.condition] || (sums[d.condition] = { total: 0, reviews: 0 });
+        s.total += Number(d.rating) * Number(d.reviews);
+        s.reviews += Number(d.reviews);
+      });
+      return rated.map((d) => {
+        const n = Number(d.reviews);
+        const avg = sums[d.condition].total / sums[d.condition].reviews;
+        return {
+          generic_name: d.generic_name,
+          condition: d.condition,
+          adj_rating: Math.round(((n * Number(d.rating) + PRIOR_REVIEWS * avg) / (n + PRIOR_REVIEWS)) * 10) / 10,
+          view_average: Math.round(avg * 100) / 100,
+        };
+      });
+    },
+  });
+  dash.calc('class_summary', {
+    inputs: ['drugs', 'adjusted'],
+    title: 'Class averages',
+    description: 'Review-weighted average rating, and adjusted rating, per drug class in each view.',
+    fn: (drugs, adjusted) => {
+      const adj = new Map(adjusted.map((a) => [a.condition + '|' + a.generic_name, a.adj_rating]));
+      const acc = new Map();
+      drugs.forEach((d) => {
+        const n = Number(d.reviews);
+        if (d.rating === '' || d.rating == null || !(n > 0)) return;
+        const k = d.condition + '|' + d.drug_class;
+        const a = acc.get(k) || { condition: d.condition, drug_class: d.drug_class, class_group: d.class_group, total: 0, totalAdj: 0, reviews: 0, drugs: 0 };
+        a.total += Number(d.rating) * n;
+        a.totalAdj += adj.get(d.condition + '|' + d.generic_name) * n;
+        a.reviews += n;
+        a.drugs += 1;
+        acc.set(k, a);
+      });
+      return [...acc.values()].map((a) => ({
+        condition: a.condition, drug_class: a.drug_class, class_group: a.class_group,
+        avg_rating: Math.round((a.total / a.reviews) * 10) / 10,
+        avg_adj_rating: Math.round((a.totalAdj / a.reviews) * 10) / 10,
+        reviews: a.reviews, drugs: a.drugs,
+      }));
+    },
+  });
+  dash.calc('compare', {
+    inputs: ['drugs', 'adjusted'],
+    title: 'Major depression vs bipolar disorder',
+    description: 'Drugs rated for both conditions, with the bipolar rating minus the major depression rating.',
+    fn: (drugs, adjusted) => {
+      const adj = new Map(adjusted.map((a) => [a.condition + '|' + a.generic_name, a.adj_rating]));
+      const pick = (c) => new Map(drugs.filter((d) => d.condition === c && d.rating !== '' && d.rating != null && Number(d.reviews) > 0).map((d) => [d.generic_name, d]));
+      const md = pick('Major depression');
+      const bp = pick('Bipolar disorder');
+      const r1 = (v) => Math.round(v * 10) / 10;
+      return [...md.keys()].filter((g) => bp.has(g)).map((g) => {
+        const a = md.get(g), b = bp.get(g);
+        const ma = adj.get('Major depression|' + g), ba = adj.get('Bipolar disorder|' + g);
+        return {
+          generic_name: g, drug_class: a.drug_class, class_group: a.class_group, brand_names: a.brand_names,
+          md_rating: Number(a.rating), md_reviews: Number(a.reviews), md_adj: ma,
+          bp_rating: Number(b.rating), bp_reviews: Number(b.reviews), bp_adj: ba,
+          diff: r1(Number(b.rating) - Number(a.rating)), diff_adj: r1(ba - ma),
+        };
+      });
+    },
+  });
+
+  // ---------- helpers ----------
+  const fmt = d3.format(',');
+  const el = (id) => document.getElementById(id);
+  const chartBox = el('dx-chart');
+  const listBox = el('dx-list');
+  const notesBox = el('dx-notes');
+  const classChartBox = el('dx-class-chart');
+  const compareBox = el('dx-compare-chart');
+  const tableWrap = el('dx-table-wrap');
+  const tableEl = document.querySelector('.dx-table');
+  const tbody = tableEl.querySelector('tbody');
+  const classesBox = el('dx-classes');
+  const legendBox = el('dx-legend');
+  const statusEl = el('dx-status');
+  const qInput = el('dx-q');
+  const narrowMQ = window.matchMedia('(max-width: 640px)');
+  const ROW_LIMIT = 12;
+  const makeTip = () => { const t = document.createElement('div'); t.className = 'dx-tip'; t.hidden = true; return t; };
+  const tipMain = makeTip(), tipClass = makeTip(), tipCompare = makeTip();
+  const hiders = new Map(); // chart box -> its hide function
+
+  let sort = { key: 'reviews', dir: -1 };
+  let intro = true;
+  let showAllRows = false;
+  let highlight = () => {};
+  let yMinAll = 0;
+  let byDrug = new Map();
+
+  const params = () => {
+    const p = { ...DEFAULTS, ...(dash.params() || {}) };
+    if (!Array.isArray(p.hidden)) p.hidden = [];
+    p.q = typeof p.q === 'string' ? p.q : '';
+    p.minReviews = Number(p.minReviews) || 0;
+    if (p.ratingMode !== 'adj') p.ratingMode = 'raw';
+    if (p.display !== 'list') p.display = 'chart';
+    return p;
+  };
+  const color = (g) => dash.colors[Math.max(0, GROUPS.indexOf(g))];
+  const colorMD = () => dash.colors[5];
+  const colorBP = () => dash.colors[6];
+  const parse = (rows) => rows.map((r) => ({
+    ...r,
+    ratingN: r.rating === '' || r.rating == null ? null : Number(r.rating),
+    reviewsN: Number(r.reviews) || 0,
+  }));
+  const passes = (d, p) => d.reviewsN >= p.minReviews && !p.hidden.includes(d.drug_class)
+    && (p.use === 'all' || d.label_status === p.use) && (p.rx === 'all' || d.rx_otc === p.rx);
+  const matcher = (q) => {
+    const s = q.trim().toLowerCase();
+    return s ? (d) => (d.generic_name + ' ' + (d.brand_names || '')).toLowerCase().includes(s) : () => true;
+  };
+  const swatch = (c, isColor) => { const s = document.createElement('span'); s.className = 'dx-sw'; s.style.background = isColor ? c : color(c); return s; };
+  const one = (v) => (v == null || Number.isNaN(Number(v)) ? '' : Number(v).toFixed(1));
+  const signed = (v) => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1);
+  const reviewsText = (n) => `${fmt(n)} review${n === 1 ? '' : 's'}`;
+  const div = (cls, text) => { const e = document.createElement('div'); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  function placeTip(tip, W, H, px, py, narrow) {
+    tip.hidden = false;
+    const tw = tip.offsetWidth, th = tip.offsetHeight;
+    let left, top;
+    if (narrow) { // above or below the point, so a finger doesn't cover it
+      left = Math.max(0, Math.min(W - tw, px - tw / 2));
+      top = py - th - 16;
+      if (top < 0) top = Math.min(H - th, py + 16);
+    } else {
+      left = px + 14;
+      if (left + tw > W) left = px - 14 - tw;
+      left = Math.max(0, left);
+      top = Math.max(0, Math.min(H - th, py - th / 2));
+    }
+    tip.style.transform = `translate(${left}px, ${top}px)`;
+  }
+
+  // ---------- controls ----------
+  el('dx-min').append(...MINS.map((v) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'dx-btn'; b.dataset.v = v;
+    b.textContent = v === 0 ? 'Any' : v + '+';
+    return b;
+  }));
+  const segClick = (id, key, cast = (v) => v) => el(id).addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (b) dash.setParams({ [key]: cast(b.dataset.v) });
+  });
+  segClick('dx-min', 'minReviews', Number);
+  segClick('dx-scale', 'xScale');
+  segClick('dx-mode', 'ratingMode');
+  segClick('dx-display', 'display');
+  el('dx-cond').addEventListener('change', (e) => dash.setParams({ condition: e.target.value }));
+  el('dx-use').addEventListener('change', (e) => dash.setParams({ use: e.target.value }));
+  el('dx-rx').addEventListener('change', (e) => dash.setParams({ rx: e.target.value }));
+  el('dx-labels').addEventListener('change', (e) => dash.setParams({ labels: e.target.checked }));
+  qInput.addEventListener('input', () => dash.setParams({ q: qInput.value }));
+  el('dx-reset').addEventListener('click', () => { dash.resetParams(); qInput.value = ''; });
+  el('dx-more-btn').addEventListener('click', (e) => {
+    const open = !el('dx-more').classList.contains('is-open');
+    el('dx-more').classList.toggle('is-open', open);
+    e.currentTarget.setAttribute('aria-expanded', String(open));
+  });
+  el('dx-cls-btn').addEventListener('click', (e) => {
+    classesBox.hidden = !classesBox.hidden;
+    e.currentTarget.setAttribute('aria-expanded', String(!classesBox.hidden));
+  });
+  el('dx-rows-btn').addEventListener('click', () => { showAllRows = !showAllRows; render(); });
+  let showAllList = false;
+  el('dx-list-btn').addEventListener('click', () => { showAllList = !showAllList; render(); if (!showAllList) listBox.scrollIntoView({ block: 'start' }); });
+  if (window.matchMedia('(min-width: 900px)').matches) el('dx-about').open = true;
+  document.addEventListener('pointerdown', (e) => { hiders.forEach((hide, box) => { if (!box.contains(e.target)) hide(); }); });
+
+  let classGroups = null; // [{group, classes:[...]}]
+  function buildClasses(all) {
+    if (classGroups) return;
+    classGroups = GROUPS.filter((g) => all.some((d) => d.class_group === g)).map((g) => ({
+      group: g,
+      classes: d3.rollups(all.filter((d) => d.class_group === g), (v) => d3.sum(v, (d) => d.reviewsN), (d) => d.drug_class)
+        .sort((a, b) => b[1] - a[1]).map((a) => a[0]),
+    }));
+    legendBox.replaceChildren(...classGroups.map(({ group }) => {
+      const head = document.createElement('button');
+      head.type = 'button'; head.className = 'dx-ghead'; head.dataset.group = group;
+      head.append(swatch(group), document.createTextNode(group));
+      return head;
+    }));
+    classesBox.replaceChildren(...classGroups.map(({ group, classes }) => {
+      const row = div('dx-cgroup');
+      const name = document.createElement('span');
+      name.className = 'dx-cgroup-name'; name.textContent = group;
+      row.append(name, ...classes.map((c) => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'dx-chip'; b.dataset.cls = c;
+        b.append(swatch(group), document.createTextNode(c));
+        return b;
+      }));
+      return row;
+    }));
+    const key = (label, c) => { const s = document.createElement('span'); s.className = 'dx-key'; s.append(swatch(c, true), document.createTextNode(label)); return s; };
+    el('dx-compare-legend').replaceChildren(key('Major depression', colorMD()), key('Bipolar disorder', colorBP()));
+  }
+  const onClassClick = (e) => {
+    if (!classGroups) return;
+    const hidden = new Set(params().hidden);
+    const chip = e.target.closest('.dx-chip');
+    const head = e.target.closest('.dx-ghead');
+    if (chip) {
+      const c = chip.dataset.cls;
+      hidden.has(c) ? hidden.delete(c) : hidden.add(c);
+    } else if (head) {
+      const g = classGroups.find((x) => x.group === head.dataset.group);
+      const anyOn = g.classes.some((c) => !hidden.has(c));
+      g.classes.forEach((c) => (anyOn ? hidden.add(c) : hidden.delete(c)));
+    } else return;
+    dash.setParams({ hidden: [...hidden] });
+  };
+  classesBox.addEventListener('click', onClassClick);
+  legendBox.addEventListener('click', onClassClick);
+
+  let viewsBuilt = false;
+  function buildViews(rowsAll) {
+    if (viewsBuilt) return;
+    const have = new Set(rowsAll.map((d) => d.condition));
+    el('dx-cond').replaceChildren(...VIEWS.filter(([v]) => have.has(v)).map(([v, label]) => new Option(label, v)));
+    viewsBuilt = true;
+  }
+
+  function syncControls(p) {
+    if (document.activeElement !== qInput) qInput.value = p.q;
+    const press = (id, v) => el(id).querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === String(v))));
+    press('dx-min', p.minReviews);
+    press('dx-scale', p.xScale);
+    press('dx-mode', p.ratingMode);
+    press('dx-display', p.display);
+    el('dx-cond').value = p.condition;
+    el('dx-use').value = p.use;
+    el('dx-rx').value = p.rx;
+    el('dx-labels').checked = !!p.labels;
+    classesBox.querySelectorAll('.dx-chip').forEach((b) => b.setAttribute('aria-pressed', String(!p.hidden.includes(b.dataset.cls))));
+    (classGroups || []).forEach(({ group, classes }) => {
+      const h = legendBox.querySelector(`.dx-ghead[data-group="${CSS.escape(group)}"]`);
+      const on = classes.filter((c) => !p.hidden.includes(c)).length;
+      if (h) {
+        h.dataset.state = on === 0 ? 'off' : 'on';
+        h.setAttribute('aria-pressed', String(on > 0));
+        h.setAttribute('aria-label', `${group}: ${on === 0 ? 'hidden' : on < classes.length ? 'partly shown' : 'shown'}. Toggle group`);
+      }
+    });
+    el('dx-cls-count').textContent = p.hidden.length ? ` (${p.hidden.length} hidden)` : '';
+    const nActive = [p.ratingMode !== 'raw', p.minReviews > 0, p.use !== 'all', p.rx !== 'all', p.xScale !== 'log', !p.labels].filter(Boolean).length;
+    el('dx-more-count').textContent = nActive ? ` (${nActive})` : '';
+    const list = p.display === 'list';
+    chartBox.hidden = list;
+    listBox.hidden = !list;
+    el('dx-main-title').textContent = list ? (p.ratingMode === 'adj' ? 'Drugs ranked by adjusted rating' : 'Drugs ranked by rating') : 'Rating vs number of reviews';
+    el('dx-main-note').textContent = list
+      ? 'Highest rated first. The bar shows how many reviews each drug has, on a log scale. Tap a group to hide or show it.'
+      : 'Each dot is one drug, with its generic and brand-name listings combined. Hover or tap a dot for details. Tap a group to hide or show it.';
+    tableEl.classList.toggle('mode-adj', p.ratingMode === 'adj');
+    tableEl.classList.toggle('mode-raw', p.ratingMode !== 'adj');
+  }
+
+  // ---------- notes (callouts) ----------
+  function activeNotes(p, visible) {
+    const names = new Set(visible.map((d) => d.generic_name));
+    return (CALLOUTS[p.condition] || []).filter(([g]) => names.has(g)).map(([g, text], i) => ({ g, text, num: i + 1 }));
+  }
+  function drawNotes(notes) {
+    notesBox.replaceChildren(...notes.map((n) => {
+      const li = document.createElement('li');
+      const num = document.createElement('span'); num.className = 'dx-num'; num.textContent = n.num;
+      const body = document.createElement('span');
+      const name = document.createElement('strong'); name.textContent = n.g + '. ';
+      body.append(name, document.createTextNode(n.text));
+      li.append(num, body);
+      return li;
+    }));
+    notesBox.hidden = notes.length === 0;
+  }
+
+  // ---------- scatter ----------
+  function niceLogTicks(lo, hi) {
+    return [[1, 2, 5], [1, 3], [1]].map((mult) => {
+      const t = [];
+      for (let e = Math.floor(Math.log10(lo)) - 1; e <= Math.ceil(Math.log10(hi)); e++) {
+        mult.forEach((m) => { const v = m * Math.pow(10, e); if (v >= lo && v <= hi && v >= 1) t.push(v); });
+      }
+      return t;
+    });
+  }
+
+  function drawChart(all, base, p, val, notes) {
+    const W = Math.floor(chartBox.clientWidth);
+    if (!W) return;
+    const narrow = W < 560;
+    const H = Math.round(narrow ? Math.max(320, Math.min(440, W * 1.0)) : Math.max(340, Math.min(540, W * 0.56)));
+    const hit = matcher(p.q);
+    const searching = p.q.trim() !== '';
+    const rated = all.filter((d) => val(d) != null && d.reviewsN > 0);
+    const pts = base.filter((d) => val(d) != null && d.reviewsN > 0);
+    const domainRows = rated.filter((d) => d.reviewsN >= p.minReviews);
+    const maxR = d3.max(domainRows, (d) => d.reviewsN) || 10;
+    const minR = d3.min(domainRows, (d) => d.reviewsN) || 1;
+
+    const svg = d3.create('svg').attr('class', 'dx-svg' + (intro && pts.length ? ' is-intro' : ''))
+      .attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Scatter plot of rating against number of reviews, one dot per drug');
+    chartBox.replaceChildren(svg.node(), tipMain);
+    if (pts.length) intro = false;
+
+    const meas = svg.append('text').attr('class', 'dx-tick').attr('visibility', 'hidden');
+    const tw = (s) => { meas.text(s); return meas.node().getComputedTextLength(); };
+    const yTicks = d3.range(yMinAll, 11, (10 - yMinAll) > 8 && H < 380 ? 2 : 1);
+    const m = { top: 12, right: 14, bottom: 46, left: 0 };
+    m.left = 20 + d3.max(yTicks, (t) => tw(String(t))) + 10;
+    const x0 = m.left, x1 = W - m.right, y0 = H - m.bottom, y1 = m.top;
+
+    let x, xTicks;
+    if (p.xScale === 'linear') {
+      x = d3.scaleLinear([0, maxR * 1.04], [x0, x1]).nice();
+      xTicks = x.ticks(Math.max(2, Math.floor((x1 - x0) / 90)));
+    } else {
+      x = d3.scaleLog([Math.max(0.7, minR / 1.5), maxR * 1.35], [x0, x1]);
+      const fits = (t) => {
+        const pos = t.map((v) => ({ c: x(v), w: tw(fmt(v)) }));
+        for (let i = 1; i < pos.length; i++) if ((pos[i].c - pos[i].w / 2) - (pos[i - 1].c + pos[i - 1].w / 2) < 12) return false;
+        return pos.length === 0 || (pos[0].c - pos[0].w / 2 >= 0 && pos[pos.length - 1].c + pos[pos.length - 1].w / 2 <= W);
+      };
+      const cands = niceLogTicks(...x.domain());
+      xTicks = cands.find((t) => t.length >= 2 && fits(t)) || cands[cands.length - 1];
+    }
+    const y = d3.scaleLinear([yMinAll, 10], [y0, y1]);
+    meas.remove();
+
+    const grid = svg.append('g');
+    grid.selectAll('.gy').data(yTicks).join('line').attr('class', 'dx-grid')
+      .attr('x1', x0).attr('x2', x1).attr('y1', (t) => y(t)).attr('y2', (t) => y(t));
+    grid.selectAll('.gx').data(xTicks).join('line').attr('class', 'dx-grid')
+      .attr('y1', y1).attr('y2', y0).attr('x1', (t) => x(t)).attr('x2', (t) => x(t));
+    svg.append('line').attr('class', 'dx-axis').attr('x1', x0).attr('x2', x1).attr('y1', y0).attr('y2', y0);
+    svg.append('g').selectAll('text').data(yTicks).join('text').attr('class', 'dx-tick')
+      .attr('x', x0 - 8).attr('y', (t) => y(t)).attr('dy', '0.32em').attr('text-anchor', 'end').text((t) => t);
+    svg.append('g').selectAll('text').data(xTicks).join('text').attr('class', 'dx-tick')
+      .attr('x', (t) => x(t)).attr('y', y0 + 16).attr('text-anchor', 'middle').text((t) => fmt(t));
+    svg.append('text').attr('class', 'dx-axis-title').attr('x', (x0 + x1) / 2).attr('y', H - 6).attr('text-anchor', 'middle')
+      .text(`Number of reviews (${p.xScale === 'linear' ? 'linear' : 'log'} scale)`);
+    svg.append('text').attr('class', 'dx-axis-title').attr('transform', `translate(12,${(y0 + y1) / 2}) rotate(-90)`)
+      .attr('text-anchor', 'middle').text(p.ratingMode === 'adj' ? 'Adjusted rating' : 'Average rating');
+
+    const r = narrow ? 4.5 : 5.5;
+    const cx = (d) => x(d.reviewsN), cy = (d) => y(val(d));
+    const ordered = [...pts].sort((a, b) => (hit(a) - hit(b)) || (b.reviewsN - a.reviewsN));
+    svg.append('g').selectAll('circle').data(ordered, (d) => d.generic_name).join('circle')
+      .attr('class', (d) => 'dx-dot' + (hit(d) ? '' : ' is-dim'))
+      .attr('cx', cx).attr('cy', cy).attr('r', r)
+      .style('fill', (d) => color(d.class_group));
+
+    const live = pts.filter(hit);
+    const boxes = [];
+    const clash = (b, self) => boxes.some((o) => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0)
+      || live.some((d) => d !== self && cx(d) + r > b.x0 && cx(d) - r < b.x1 && cy(d) + r > b.y0 && cy(d) - r < b.y1);
+    const inside = (b) => b.x0 >= x0 && b.x1 <= W && b.y0 >= 0 && b.y1 <= y0;
+
+    // numbered callout badges go first, so name labels steer around them
+    const badges = svg.append('g');
+    const noted = new Set();
+    notes.forEach((n) => {
+      const d = live.find((e) => e.generic_name === n.g);
+      if (!d) return;
+      noted.add(d);
+      const px = cx(d), py = cy(d), R = 8, o = r + R - 1;
+      const spots = [[o, -o], [-o, -o], [o, o], [-o, o], [0, -(r + R + 2)], [0, r + R + 2]].map(([dx, dy]) => ({
+        bx: px + dx, by: py + dy, b: { x0: px + dx - R, x1: px + dx + R, y0: py + dy - R, y1: py + dy + R },
+      }));
+      const s = spots.find((q) => inside(q.b) && !clash(q.b, d)) || spots.find((q) => inside(q.b)) || spots[0];
+      boxes.push(s.b);
+      badges.append('circle').attr('class', 'dx-badge').attr('cx', s.bx).attr('cy', s.by).attr('r', R);
+      badges.append('text').attr('class', 'dx-badge-t').attr('x', s.bx).attr('y', s.by).attr('dy', '0.35em').attr('text-anchor', 'middle').text(n.num);
+    });
+
+    // name labels: greedy, noted and most-reviewed first, never over another label, badge or dot
+    const cand = (searching || p.labels) ? [...live].sort((a, b) => (noted.has(b) - noted.has(a)) || (b.reviewsN - a.reviewsN)) : [];
+    const lab = svg.append('g');
+    const lm = lab.append('text').attr('class', 'dx-label').attr('visibility', 'hidden');
+    cand.forEach((d) => {
+      lm.text(d.generic_name);
+      const w = lm.node().getComputedTextLength(), h = 12, px = cx(d), py = cy(d);
+      const opts = [
+        { a: 'start', tx: px + r + 4, ty: py + 4, b: { x0: px + r + 3, x1: px + r + 5 + w, y0: py - 7, y1: py + 6 } },
+        { a: 'end', tx: px - r - 4, ty: py + 4, b: { x0: px - r - 5 - w, x1: px - r - 3, y0: py - 7, y1: py + 6 } },
+        { a: 'middle', tx: px, ty: py - r - 5, b: { x0: px - w / 2 - 1, x1: px + w / 2 + 1, y0: py - r - 5 - h, y1: py - r - 3 } },
+        { a: 'middle', tx: px, ty: py + r + 13, b: { x0: px - w / 2 - 1, x1: px + w / 2 + 1, y0: py + r + 2, y1: py + r + 15 } },
+      ];
+      const ok = opts.find((o) => inside(o.b) && !clash(o.b, d));
+      if (!ok) return;
+      boxes.push(ok.b);
+      lab.append('text').attr('class', 'dx-label' + (searching ? ' is-match' : ''))
+        .attr('x', ok.tx).attr('y', ok.ty).attr('text-anchor', ok.a).text(d.generic_name);
+    });
+    lm.remove();
+
+    if (!pts.length) {
+      svg.append('text').attr('class', 'dx-axis-title').attr('x', (x0 + x1) / 2).attr('y', (y0 + y1) / 2).attr('text-anchor', 'middle')
+        .text('No drugs match the current filters.');
+    }
+
+    // hover / tap
+    const ring = svg.append('circle').attr('class', 'dx-ring').attr('r', r + 3).attr('visibility', 'hidden');
+    const delaunay = d3.Delaunay.from(live, cx, cy);
+    const hide = () => { tipMain.hidden = true; ring.attr('visibility', 'hidden'); };
+    hiders.set(chartBox, hide);
+    const show = (d, withTip) => {
+      ring.attr('cx', cx(d)).attr('cy', cy(d)).attr('visibility', 'visible');
+      if (!withTip) { tipMain.hidden = true; return; }
+      const same = live.filter((e) => Math.abs(cx(e) - cx(d)) < 2 && Math.abs(cy(e) - cy(d)) < 2);
+      tipMain.replaceChildren(...same.map(drugTip));
+      placeTip(tipMain, W, H, cx(d), cy(d), narrow);
+    };
+    highlight = (key) => {
+      const d = key && live.find((e) => e.generic_name === key);
+      d ? show(d, false) : hide();
+    };
+    const move = (ev) => {
+      const [mx, my] = d3.pointer(ev);
+      const d = live.length ? live[delaunay.find(mx, my)] : null;
+      if (!d || (cx(d) - mx) ** 2 + (cy(d) - my) ** 2 > 900) return hide();
+      show(d, true);
+    };
+    svg.append('rect').attr('x', x0 - 12).attr('y', 0).attr('width', Math.max(0, x1 - x0 + 24)).attr('height', y0 + 8)
+      .attr('fill', 'transparent').style('fill', 'transparent')
+      .on('pointermove', move).on('pointerdown', move).on('pointerleave', (ev) => { if (ev.pointerType === 'mouse') hide(); });
+  }
+
+  function drugTip(d) {
+    const box = div();
+    box.append(div('dx-tip-name', d.generic_name));
+    if (d.brand_names) box.append(div('dx-tip-sub', d.brand_names));
+    const cls = div('dx-tip-row');
+    cls.append(swatch(d.class_group), document.createTextNode(`${d.drug_class} · ${d.class_group}`));
+    box.append(cls);
+    const nums = [`Rating ${d.rating}`];
+    if (d.adjN != null) nums.push(`adjusted ${one(d.adjN)}`);
+    nums.push(reviewsText(d.reviewsN));
+    box.append(div('dx-tip-num', nums.join(' · ')));
+    const parts = (VIEW_PARTS[d.condition] || []).map((c) => (byDrug.get(d.generic_name) || {})[c]).filter((x) => x && x.reviewsN > 0);
+    if (parts.length > 1) box.append(div('dx-tip-sub', parts.map((x) => `${x.condition} ${x.rating} (${fmt(x.reviewsN)})`).join(' · ')));
+    const extra = [d.rx_otc, d.label_status === 'Off-label' ? (VIEW_PARTS[d.condition] ? 'Off-label' : 'Off-label for ' + d.condition.toLowerCase()) : '', d.new_approval === 'yes' ? 'New approval' : ''].filter(Boolean).join(' · ');
+    if (extra) box.append(div('dx-tip-sub', extra));
+    return box;
+  }
+
+  // ---------- ranked list ----------
+  function drawList(base, p, val, notes) {
+    const hit = matcher(p.q);
+    const rows = base.filter((d) => hit(d) && val(d) != null && d.reviewsN > 0)
+      .sort((a, b) => (val(b) - val(a)) || (b.reviewsN - a.reviewsN));
+    const maxN = d3.max(rows, (d) => d.reviewsN) || 1;
+    const noteNum = new Map(notes.map((n) => [n.g, n.num]));
+    const LIST_LIMIT = 20;
+    const cut = narrowMQ.matches && !showAllList && rows.length > LIST_LIMIT + 5;
+    const listBtn = el('dx-list-btn');
+    listBtn.hidden = !(narrowMQ.matches && rows.length > LIST_LIMIT + 5);
+    listBtn.textContent = cut ? `Show all ${rows.length} drugs` : 'Show top 20 only';
+    listBox.replaceChildren(...(cut ? rows.slice(0, LIST_LIMIT) : rows).map((d, i) => {
+      const li = document.createElement('li');
+      li.className = 'dx-li';
+      const main = div('dx-li-main');
+      const name = div('dx-li-name');
+      const nm = document.createElement('span'); nm.className = 'dx-li-label'; nm.textContent = d.generic_name;
+      name.append(swatch(d.class_group), nm);
+      if (noteNum.has(d.generic_name)) { const b = document.createElement('span'); b.className = 'dx-num'; b.textContent = noteNum.get(d.generic_name); name.append(b); }
+      main.append(name, div('dx-li-sub', [d.drug_class, d.brand_names].filter(Boolean).join(' · ')));
+      const rev = div('dx-li-rev');
+      const meter = document.createElement('span'); meter.className = 'dx-meter';
+      const fill = document.createElement('span'); fill.style.width = `${(Math.log10(d.reviewsN + 1) / Math.log10(maxN + 1)) * 100}%`;
+      meter.append(fill);
+      const cnt = document.createElement('span'); cnt.textContent = reviewsText(d.reviewsN);
+      rev.append(meter, cnt);
+      li.append(div('dx-rank', String(i + 1)), main, div('dx-li-rating', p.ratingMode === 'adj' ? one(d.adjN) : d.rating), rev);
+      return li;
+    }));
+    if (!rows.length) listBox.append(div('dx-empty', 'No drugs match the current filters.'));
+  }
+
+  // ---------- row charts (class summary, comparison) ----------
+  function drawRowChart(box, tip, rows, axisTitle, ariaLabel) {
+    const W = Math.floor(box.clientWidth);
+    if (!W) return;
+    const narrow = W < 560;
+    const svg = d3.create('svg').attr('class', 'dx-svg').attr('width', '100%').attr('role', 'img').attr('aria-label', ariaLabel);
+    box.replaceChildren(svg.node(), tip);
+    if (!rows.length) {
+      svg.attr('viewBox', `0 0 ${W} 40`);
+      svg.append('text').attr('class', 'dx-rowval').attr('x', 0).attr('y', 24).text('No drugs match the current filters.');
+      return;
+    }
+    const meas = svg.append('text').attr('visibility', 'hidden');
+    const tw = (s, cls) => { meas.attr('class', cls).text(s); return meas.node().getComputedTextLength(); };
+    const rowH = narrow ? 46 : 30, top = 4, bottom = 42;
+    const labelW = narrow ? 0 : Math.min(W * 0.38, d3.max(rows, (r) => tw(r.label, 'dx-rowlab')) + 16);
+    const valueW = narrow ? 0 : d3.max(rows, (r) => tw(r.value, 'dx-rowval')) + 16;
+    meas.remove();
+    const x0 = narrow ? 6 : labelW, x1 = W - (narrow ? 6 : valueW);
+    const H = top + rows.length * rowH + bottom;
+    svg.attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleLinear([yMinAll, 10], [x0, x1]);
+    const ticks = d3.range(yMinAll, 11, (x1 - x0) < 280 ? 2 : 1);
+    const yb = H - bottom;
+    svg.append('g').selectAll('line').data(ticks).join('line').attr('class', 'dx-grid')
+      .attr('x1', (t) => x(t)).attr('x2', (t) => x(t)).attr('y1', top).attr('y2', yb);
+    svg.append('line').attr('class', 'dx-axis').attr('x1', x0).attr('x2', x1).attr('y1', yb).attr('y2', yb);
+    svg.append('g').selectAll('text').data(ticks).join('text').attr('class', 'dx-tick')
+      .attr('x', (t) => x(t)).attr('y', yb + 16).attr('text-anchor', 'middle').text((t) => t);
+    svg.append('text').attr('class', 'dx-axis-title').attr('x', (x0 + x1) / 2).attr('y', H - 6).attr('text-anchor', 'middle').text(axisTitle);
+
+    const points = [];
+    const g = svg.append('g');
+    rows.forEach((row, i) => {
+      const rowTop = top + i * rowH;
+      const yc = narrow ? rowTop + 31 : rowTop + rowH / 2;
+      if (narrow) {
+        const val = g.append('text').attr('class', 'dx-rowval').attr('x', W - 6).attr('y', rowTop + 13).attr('text-anchor', 'end').text(row.value);
+        const lab = g.append('text').attr('class', 'dx-rowlab').attr('x', x0).attr('y', rowTop + 13).text(row.label);
+        const room = W - 6 - val.node().getComputedTextLength() - 10 - x0;
+        let t = row.label;
+        while (lab.node().getComputedTextLength() > room && t.length > 4) { t = t.slice(0, -1); lab.text(t.trimEnd() + '\u2026'); }
+        if (t !== row.label) lab.append('title').text(row.label);
+      } else {
+        g.append('text').attr('class', 'dx-rowlab').attr('x', x0 - 12).attr('y', yc).attr('dy', '0.32em').attr('text-anchor', 'end').text(row.label);
+        g.append('text').attr('class', 'dx-rowval').attr('x', W - 2).attr('y', yc).attr('dy', '0.32em').attr('text-anchor', 'end').text(row.value);
+      }
+      g.append('line').attr('class', 'dx-track').attr('x1', x0).attr('x2', x1).attr('y1', yc).attr('y2', yc);
+      if (row.gap) g.append('line').attr('class', 'dx-gap').attr('x1', x(row.gap[0])).attr('x2', x(row.gap[1])).attr('y1', yc).attr('y2', yc);
+      row.dots.forEach((dot) => {
+        g.append('circle').attr('class', 'dx-dot').attr('cx', x(dot.v)).attr('cy', yc).attr('r', dot.r || (narrow ? 4 : 4.5)).style('fill', dot.color);
+        points.push({ px: x(dot.v), py: yc, tip: dot.tip });
+      });
+      if (row.avg != null) {
+        g.append('rect').attr('class', 'dx-avg').attr('x', x(row.avg) - 1.5).attr('y', yc - 9).attr('width', 3).attr('height', 18).attr('rx', 1.5);
+        points.push({ px: x(row.avg), py: yc, tip: row.avgTip });
+      }
+    });
+
+    const ring = svg.append('circle').attr('class', 'dx-ring').attr('r', 8).attr('visibility', 'hidden');
+    const delaunay = d3.Delaunay.from(points, (q) => q.px, (q) => q.py);
+    const hide = () => { tip.hidden = true; ring.attr('visibility', 'hidden'); };
+    hiders.set(box, hide);
+    const move = (ev) => {
+      const [mx, my] = d3.pointer(ev);
+      const q = points.length ? points[delaunay.find(mx, my)] : null;
+      if (!q || (q.px - mx) ** 2 + (q.py - my) ** 2 > 625) return hide();
+      ring.attr('cx', q.px).attr('cy', q.py).attr('visibility', 'visible');
+      tip.replaceChildren(q.tip());
+      placeTip(tip, W, H, q.px, q.py, narrow);
+    };
+    svg.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', yb)
+      .attr('fill', 'transparent').style('fill', 'transparent')
+      .on('pointermove', move).on('pointerdown', move).on('pointerleave', (ev) => { if (ev.pointerType === 'mouse') hide(); });
+  }
+
+  function rowState(box, status) {
+    hiders.get(box)?.();
+    if (status === 'loading') { box.classList.add('dash-skeleton'); box.replaceChildren(); return; }
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren(div('dx-fail', 'Failed to load'));
+  }
+
+  function drawClassChart(all, p, val) {
+    const cs = dash.data('class_summary');
+    if (cs.status !== 'ok') return rowState(classChartBox, cs.status);
+    const adjMode = p.ratingMode === 'adj';
+    const rows = cs.data.filter((c) => c.condition === p.condition && !p.hidden.includes(c.drug_class))
+      .map((c) => ({ ...c, avg: Number(adjMode ? c.avg_adj_rating : c.avg_rating) }))
+      .sort((a, b) => b.avg - a.avg || b.reviews - a.reviews)
+      .map((c) => {
+        const drugs = all.filter((d) => d.drug_class === c.drug_class && val(d) != null && d.reviewsN > 0);
+        return {
+          label: c.drug_class,
+          value: `${one(c.avg)} · ${reviewsText(Number(c.reviews))}`,
+          avg: c.avg,
+          avgTip: () => {
+            const b = div();
+            b.append(div('dx-tip-name', c.drug_class), div('dx-tip-sub', c.class_group),
+              div('dx-tip-num', `${adjMode ? 'Adjusted class average' : 'Class average'} ${one(c.avg)}`),
+              div('dx-tip-sub', `${c.drugs} drug${Number(c.drugs) === 1 ? '' : 's'} · ${reviewsText(Number(c.reviews))}`));
+            return b;
+          },
+          dots: drugs.map((d) => ({ v: val(d), color: color(d.class_group), r: 3.5, tip: () => drugTip(d) })),
+        };
+      });
+    classChartBox.classList.remove('dash-skeleton');
+    drawRowChart(classChartBox, tipClass, rows, adjMode ? 'Adjusted rating' : 'Average rating', 'Ratings by drug class');
+  }
+
+  function drawCompare(p) {
+    const cmp = dash.data('compare');
+    if (cmp.status !== 'ok') return rowState(compareBox, cmp.status);
+    const adjMode = p.ratingMode === 'adj';
+    const hit = matcher(p.q);
+    const rows = cmp.data
+      .filter((c) => !p.hidden.includes(c.drug_class) && Number(c.md_reviews) >= p.minReviews && Number(c.bp_reviews) >= p.minReviews && hit(c))
+      .map((c) => ({ ...c, md: Number(adjMode ? c.md_adj : c.md_rating), bp: Number(adjMode ? c.bp_adj : c.bp_rating), gap: Number(adjMode ? c.diff_adj : c.diff) }))
+      .sort((a, b) => b.gap - a.gap || (b.md_reviews + b.bp_reviews) - (a.md_reviews + a.bp_reviews))
+      .map((c) => {
+        const tipFor = () => {
+          const b = div();
+          b.append(div('dx-tip-name', c.generic_name), div('dx-tip-sub', c.drug_class));
+          const line = (label, v, n, col) => { const r = div('dx-tip-row'); r.append(swatch(col, true), document.createTextNode(`${label} ${one(v)} · ${reviewsText(Number(n))}`)); return r; };
+          b.append(line('Major depression', c.md, c.md_reviews, colorMD()), line('Bipolar disorder', c.bp, c.bp_reviews, colorBP()));
+          b.append(div('dx-tip-num', `Gap ${signed(c.gap)}`));
+          return b;
+        };
+        return {
+          label: c.generic_name,
+          value: signed(c.gap),
+          gap: [c.md, c.bp],
+          dots: [{ v: c.md, color: colorMD(), tip: tipFor }, { v: c.bp, color: colorBP(), tip: tipFor }],
+        };
+      });
+    compareBox.classList.remove('dash-skeleton');
+    drawRowChart(compareBox, tipCompare, rows, adjMode ? 'Adjusted rating' : 'Average rating', 'Major depression vs bipolar disorder ratings');
+  }
+
+  // ---------- table ----------
+  document.querySelector('.dx-table thead').addEventListener('click', (e) => {
+    const b = e.target.closest('.dx-sort');
+    if (!b) return;
+    const k = b.dataset.sort;
+    const numeric = ['rating', 'adj_rating', 'reviews'].includes(k);
+    sort = sort.key === k ? { key: k, dir: -sort.dir } : { key: k, dir: numeric ? -1 : 1 };
+    render();
+  });
+  tbody.addEventListener('pointerover', (e) => { const tr = e.target.closest('tr[data-key]'); highlight(tr ? tr.dataset.drug : null); });
+  tbody.addEventListener('pointerleave', () => highlight(null));
+
+  function drawTable(base, p) {
+    const hit = matcher(p.q);
+    const rows = base.filter(hit);
+    const num = { rating: (d) => d.ratingN, adj_rating: (d) => d.adjN, reviews: (d) => d.reviewsN };
+    rows.sort((a, b) => {
+      if (num[sort.key]) {
+        const va = num[sort.key](a), vb = num[sort.key](b);
+        if (va == null && vb == null) return 0;
+        if (va == null) return 1;
+        if (vb == null) return -1;
+        return (va - vb) * sort.dir || b.reviewsN - a.reviewsN;
+      }
+      return String(a[sort.key] || '').localeCompare(String(b[sort.key] || '')) * sort.dir;
+    });
+    tableEl.querySelectorAll('th').forEach((th) => {
+      const k = th.querySelector('.dx-sort').dataset.sort;
+      if (k === sort.key) th.setAttribute('aria-sort', sort.dir > 0 ? 'ascending' : 'descending');
+      else th.removeAttribute('aria-sort');
+    });
+    const limit = narrowMQ.matches && !showAllRows && rows.length > ROW_LIMIT + 3;
+    const rowsBtn = el('dx-rows-btn');
+    rowsBtn.hidden = !(narrowMQ.matches && rows.length > ROW_LIMIT + 3);
+    rowsBtn.textContent = limit ? `Show all ${rows.length} drugs` : 'Show fewer';
+    if (!rows.length) {
+      const tr = document.createElement('tr'); const c = document.createElement('td');
+      c.colSpan = 8; c.className = 'dx-empty'; c.textContent = 'No drugs match the current filters.';
+      tr.append(c); tbody.replaceChildren(tr);
+      return;
+    }
+    tbody.replaceChildren(...(limit ? rows.slice(0, ROW_LIMIT) : rows).map((d) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = encodeURIComponent(d.generic_name) + ',' + encodeURIComponent(d.condition);
+      tr.dataset.drug = d.generic_name;
+      const td = (text, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = text; return c; };
+      const clsCell = document.createElement('td'); clsCell.className = 'dx-cls dx-hide-narrow';
+      clsCell.append(swatch(d.class_group), document.createTextNode(d.drug_class));
+      const drugCell = td(d.generic_name, 'dx-drug');
+      if (narrowMQ.matches) {
+        const sub = document.createElement('div'); sub.className = 'dx-drug-sub';
+        sub.append(swatch(d.class_group), document.createTextNode(d.drug_class));
+        drugCell.append(sub);
+      }
+      tr.append(
+        drugCell,
+        td(d.brand_names || '', 'dx-brands dx-hide-narrow'),
+        clsCell,
+        td(d.rating, 'is-num dx-col-raw'),
+        td(one(d.adjN), 'is-num dx-col-adj'),
+        td(fmt(d.reviewsN), 'is-num'),
+        td(d.rx_otc || '', 'dx-hide-narrow'),
+        td(d.label_status, 'dx-hide-narrow dx-label-col' + (d.label_status === 'Off-label' ? '' : ' dx-off')),
+      );
+      return tr;
+    }));
+  }
+
+  // ---------- render ----------
+  function render() {
+    const res = dash.data(ID);
+    const p = params();
+    syncControls(p);
+    if (res.status !== 'ok') {
+      const failed = res.status !== 'loading';
+      hiders.forEach((hide) => hide());
+      [chartBox, classChartBox, compareBox].forEach((b) => b.replaceChildren());
+      listBox.replaceChildren(); tbody.replaceChildren(); notesBox.replaceChildren();
+      statusEl.textContent = '';
+      [chartBox, tableWrap, classChartBox, compareBox].forEach((b) => b.classList.toggle('dash-skeleton', !failed));
+      if (failed) [chartBox, classChartBox, compareBox].forEach((b) => b.append(div('dx-fail', 'Failed to load')));
+      return;
+    }
+    chartBox.classList.remove('dash-skeleton');
+    tableWrap.classList.remove('dash-skeleton');
+    const adjRes = dash.data('adjusted');
+    const adjMap = new Map(adjRes.status === 'ok' ? adjRes.data.map((a) => [a.condition + '|' + a.generic_name, Number(a.adj_rating)]) : []);
+    const rowsAll = parse(res.data || []).map((d) => {
+      const k = d.condition + '|' + d.generic_name;
+      return { ...d, adjN: adjMap.has(k) ? adjMap.get(k) : null };
+    });
+    yMinAll = Math.max(0, Math.floor(d3.min(rowsAll.filter((d) => d.ratingN != null), (d) => d.ratingN) ?? 0));
+    byDrug = new Map();
+    rowsAll.forEach((d) => { if (!byDrug.has(d.generic_name)) byDrug.set(d.generic_name, {}); byDrug.get(d.generic_name)[d.condition] = d; });
+    buildClasses(rowsAll.filter((d) => d.condition === 'Total'));
+    buildViews(rowsAll);
+    syncControls(p);
+    const val = p.ratingMode === 'adj' ? (d) => d.adjN : (d) => d.ratingN;
+    const all = rowsAll.filter((d) => d.condition === p.condition);
+    const base = all.filter((d) => passes(d, p));
+    const hit = matcher(p.q);
+    const visible = base.filter((d) => hit(d) && val(d) != null && d.reviewsN > 0);
+    const notes = activeNotes(p, visible);
+    if (p.display === 'list') drawList(base, p, val, notes); else { drawChart(all, base, p, val, notes); el('dx-list-btn').hidden = true; }
+    drawNotes(notes);
+    drawClassChart(all, p, val);
+    drawCompare(p);
+    drawTable(base, p);
+
+    const rated = all.filter((d) => val(d) != null && d.reviewsN > 0).length;
+    const unrated = all.filter((d) => d.ratingN == null).length;
+    const condName = p.condition === 'Total' ? 'major depression and bipolar disorder combined' : p.condition.toLowerCase();
+    let s = `Showing ${visible.length} of ${rated} drugs with ratings for ${condName}.`;
+    if (p.q.trim()) s += ` Matching “${p.q.trim()}”.`;
+    if (unrated) s += ` ${unrated} with no reviews yet appear only in the table.`;
+    statusEl.textContent = s;
+  }
+
+  dash.onData(render);
+})();
+</script>

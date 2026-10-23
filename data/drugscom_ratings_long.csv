@@ -1,0 +1,253 @@
+generic_name,condition,brand_names,drug_class,class_group,rating,reviews,rx_otc,label_status,new_approval,conditions_listed,pregnancy_cat,csa_schedule,alcohol_interaction
+lamotrigine,Bipolar disorder,Lamlique; Lamictal; Lamictal ODT; Subvenite; Lamictal CD; Lamictal XR,Mood stabilizer,Mood stabilizer / anticonvulsant,8.0,1112,Rx,On-label,yes,Depression; Bipolar disorder,C,N,yes
+lurasidone,Bipolar disorder,Latuda,Atypical antipsychotic,Antipsychotic,6.3,734,Rx,On-label,no,Bipolar disorder,B,N,yes
+quetiapine,Bipolar disorder,Seroquel XR; Seroquel,Atypical antipsychotic,Antipsychotic,7.1,729,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+cariprazine,Bipolar disorder,Vraylar,Atypical antipsychotic,Antipsychotic,6.2,487,Rx,On-label,no,Major depressive disorder; Bipolar disorder,,N,yes
+aripiprazole,Bipolar disorder,Abilify; Opipza; Abilify Maintena; Abilify Asimtufii,Atypical antipsychotic,Antipsychotic,5.7,461,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+lithium,Bipolar disorder,Lithobid,Mood stabilizer,Mood stabilizer / anticonvulsant,7.3,366,Rx,On-label,no,Depression; Bipolar disorder,D,N,yes
+olanzapine,Bipolar disorder,Zyprexa; Zyprexa Zydis,Atypical antipsychotic,Antipsychotic,6.4,338,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+ziprasidone,Bipolar disorder,Geodon,Atypical antipsychotic,Antipsychotic,5.8,302,Rx,On-label,no,Bipolar disorder,C,N,yes
+divalproex sodium,Bipolar disorder,Depakote; Depakote ER,Mood stabilizer,Mood stabilizer / anticonvulsant,6.6,289,Rx,On-label,no,Bipolar disorder,D,N,yes
+asenapine,Bipolar disorder,Saphris,Atypical antipsychotic,Antipsychotic,7.2,254,Rx,On-label,no,Bipolar disorder,C,N,yes
+risperidone,Bipolar disorder,Risperdal; Risperdal Consta; Rykindo; Uzedy,Atypical antipsychotic,Antipsychotic,6.1,187,Rx,On-label,no,Depression; Bipolar disorder,C,N,yes
+oxcarbazepine,Bipolar disorder,Trileptal; Oxtellar XR,Other anticonvulsant,Mood stabilizer / anticonvulsant,8.1,171,Rx,Off-label,no,Bipolar disorder,C,N,yes
+lumateperone,Bipolar disorder,Caplyta,Atypical antipsychotic,Antipsychotic,6.9,150,Rx,On-label,yes,Major depressive disorder; Bipolar disorder,,N,yes
+gabapentin,Bipolar disorder,Neurontin; Gralise,Other anticonvulsant,Mood stabilizer / anticonvulsant,8.5,145,Rx,Off-label,no,Bipolar disorder,C,N,yes
+topiramate,Bipolar disorder,Topamax; Trokendi XR; Qudexy XR,Other anticonvulsant,Mood stabilizer / anticonvulsant,7.1,136,Rx,Off-label,no,Bipolar disorder,D,N,yes
+carbamazepine,Bipolar disorder,Equetro; Tegretol; Carbatrol,Mood stabilizer,Mood stabilizer / anticonvulsant,7.2,113,Rx,On-label,no,Bipolar disorder,D,N,yes
+clonazepam,Bipolar disorder,Klonopin,Benzodiazepine,Other prescription,8.8,100,Rx,Off-label,no,Bipolar disorder,D,4,yes
+bupropion,Bipolar disorder,Wellbutrin XL; Wellbutrin SR; Forfivo XL; Budeprion SR; Aplenzin; Wellbutrin; Zyban,NDRI,Antidepressant,7.3,93,Rx,Off-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+venlafaxine,Bipolar disorder,Effexor XR; Effexor,SNRI,Antidepressant,6.7,77,Rx,Off-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+escitalopram,Bipolar disorder,Lexapro,SSRI,Antidepressant,6.4,61,Rx,Off-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+paliperidone,Bipolar disorder,Invega,Atypical antipsychotic,Antipsychotic,4.8,58,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+sertraline,Bipolar disorder,Zoloft,SSRI,Antidepressant,6.8,55,Rx,Off-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+duloxetine,Bipolar disorder,Cymbalta; Irenka; Drizalma Sprinkle,SNRI,Antidepressant,6.8,51,Rx,Off-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+fluoxetine / olanzapine,Bipolar disorder,Symbyax,Antidepressant combination,Antidepressant,7.5,48,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+valproic acid,Bipolar disorder,Depakene,Mood stabilizer,Mood stabilizer / anticonvulsant,6.1,30,Rx,On-label,no,Bipolar disorder,D,N,yes
+olanzapine / samidorphan,Bipolar disorder,Lybalvi,Atypical antipsychotic,Antipsychotic,7.4,24,Rx,On-label,no,Bipolar disorder,,N,yes
+desvenlafaxine,Bipolar disorder,Pristiq; Khedezla,SNRI,Antidepressant,7.0,22,Rx,Off-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+iloperidone,Bipolar disorder,Fanapt,Atypical antipsychotic,Antipsychotic,9.3,18,Rx,On-label,no,Bipolar disorder,C,N,yes
+armodafinil,Bipolar disorder,Nuvigil,Stimulant / wakefulness / ADHD,Other prescription,9.3,15,Rx,Off-label,no,Depression; Bipolar disorder,C,4,no
+citalopram,Bipolar disorder,Celexa,SSRI,Antidepressant,8.5,14,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+perphenazine,Bipolar disorder,Trilafon,Typical antipsychotic,Antipsychotic,7.2,13,Rx,Off-label,no,Bipolar disorder,N,N,yes
+clonidine,Bipolar disorder,Catapres; Kapvay,Blood pressure medicine,Other prescription,7.6,10,Rx,Off-label,no,Bipolar disorder,C,N,yes
+levetiracetam,Bipolar disorder,Keppra,Other anticonvulsant,Mood stabilizer / anticonvulsant,6.6,8,Rx,Off-label,no,Bipolar disorder,C,N,yes
+tiagabine,Bipolar disorder,Gabitril,Other anticonvulsant,Mood stabilizer / anticonvulsant,10.0,3,Rx,Off-label,no,Bipolar disorder,C,N,yes
+verapamil,Bipolar disorder,Calan; Verelan,Blood pressure medicine,Other prescription,8.0,1,Rx,Off-label,no,Bipolar disorder,C,N,yes
+milsaperidone,Bipolar disorder,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,yes,Bipolar disorder,,N,yes
+bupropion,Depression,Wellbutrin XL; Wellbutrin SR; Forfivo XL; Budeprion SR; Aplenzin; Wellbutrin; Zyban,NDRI,Antidepressant,7.0,1409,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+sertraline,Depression,Zoloft,SSRI,Antidepressant,6.9,1296,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+venlafaxine,Depression,Effexor XR; Effexor,SNRI,Antidepressant,6.1,1044,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+escitalopram,Depression,Lexapro,SSRI,Antidepressant,7.1,954,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+desvenlafaxine,Depression,Pristiq; Khedezla,SNRI,Antidepressant,6.9,877,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+duloxetine,Depression,Cymbalta; Irenka; Drizalma Sprinkle,SNRI,Antidepressant,6.3,771,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+fluoxetine,Depression,Prozac; Sarafem,SSRI,Antidepressant,7.0,748,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+citalopram,Depression,Celexa,SSRI,Antidepressant,7.2,739,Rx,On-label,no,Depression; Bipolar disorder,C,N,yes
+mirtazapine,Depression,Remeron; Remeron SolTab,Tetracyclic (NaSSA),Antidepressant,6.7,672,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+vilazodone,Depression,Viibryd,Serotonin modulator,Antidepressant,6.0,635,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+aripiprazole,Depression,Abilify; Opipza; Abilify Maintena; Abilify Asimtufii,Atypical antipsychotic,Antipsychotic,6.4,388,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+paroxetine,Depression,Paxil; Paxil CR; Pexeva,SSRI,Antidepressant,6.6,300,Rx,On-label,no,Depression; Major depressive disorder,D,N,yes
+tramadol,Depression,Ultram,Opioid,Other prescription,9.2,247,Rx,Off-label,no,Depression,C,4,yes
+brexpiprazole,Depression,Rexulti,Atypical antipsychotic,Antipsychotic,6.9,195,Rx,On-label,no,Depression; Major depressive disorder,,N,yes
+quetiapine,Depression,Seroquel XR; Seroquel,Atypical antipsychotic,Antipsychotic,6.5,192,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+lamotrigine,Depression,Lamlique; Lamictal; Lamictal ODT; Subvenite; Lamictal CD; Lamictal XR,Mood stabilizer,Mood stabilizer / anticonvulsant,7.2,191,Rx,Off-label,yes,Depression; Bipolar disorder,C,N,yes
+olanzapine,Depression,Zyprexa; Zyprexa Zydis,Atypical antipsychotic,Antipsychotic,4.9,186,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+trazodone,Depression,Raldesy; Desyrel; Oleptro,Serotonin modulator,Antidepressant,6.7,145,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+amitriptyline,Depression,Elavil,TCA,Antidepressant,8.0,145,Rx,On-label,no,Depression,C,N,yes
+phenelzine,Depression,Nardil,MAOI,Antidepressant,8.4,145,Rx,On-label,no,Depression,C,N,yes
+l-methylfolate,Depression,Deplin; XaQuil XR; L-Methylfolate Forte,Vitamin / medical food,Supplement,7.6,140,Rx/OTC,On-label,no,Depression,N,N,no
+st. john's wort,Depression,,Herbal,Supplement,7.8,138,OTC,On-label,no,Depression,N,N,yes
+tranylcypromine,Depression,Parnate,MAOI,Antidepressant,8.4,131,Rx,On-label,no,Depression,N,N,yes
+alprazolam,Depression,Xanax,Benzodiazepine,Other prescription,8.6,106,Rx,Off-label,no,Depression,D,4,yes
+levomilnacipran,Depression,Fetzima,SNRI,Antidepressant,5.0,102,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+nefazodone,Depression,Serzone,Serotonin modulator,Antidepressant,9.2,83,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+modafinil,Depression,Provigil,Stimulant / wakefulness / ADHD,Other prescription,8.7,77,Rx,Off-label,no,Depression,C,4,no
+esketamine,Depression,Spravato,NMDA antagonist,Antidepressant,5.5,75,Rx,On-label,no,Depression; Major depressive disorder,,3,yes
+methylphenidate,Depression,Methylin ER; Ritalin; Concerta,Stimulant / wakefulness / ADHD,Other prescription,8.7,71,Rx,On-label,no,Depression,C,2,yes
+nortriptyline,Depression,Pamelor; Aventyl,TCA,Antidepressant,6.6,69,Rx,On-label,no,Depression,N,N,yes
+lithium,Depression,Lithobid,Mood stabilizer,Mood stabilizer / anticonvulsant,6.1,67,Rx,Off-label,no,Depression; Bipolar disorder,D,N,yes
+niacin,Depression,Niaspan,Vitamin / medical food,Supplement,8.3,59,Rx/OTC,Off-label,no,Depression,C,N,yes
+risperidone,Depression,Risperdal; Risperdal Consta; Rykindo; Uzedy,Atypical antipsychotic,Antipsychotic,4.9,55,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+clomipramine,Depression,Anafranil,TCA,Antidepressant,7.2,52,Rx,Off-label,no,Depression,C,N,yes
+armodafinil,Depression,Nuvigil,Stimulant / wakefulness / ADHD,Other prescription,8.2,47,Rx,Off-label,no,Depression; Bipolar disorder,C,4,no
+selegiline,Depression,Emsam; Eldepryl; Zelapar,MAOI,Antidepressant,8.1,44,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+ketamine,Depression,Ketalar,NMDA antagonist,Antidepressant,8.1,38,Rx,Off-label,no,Depression,N,3,yes
+lisdexamfetamine,Depression,Vyvanse,Stimulant / wakefulness / ADHD,Other prescription,8.7,36,Rx,Off-label,no,Depression,C,2,yes
+fluvoxamine,Depression,Luvox,SSRI,Antidepressant,6.6,34,Rx,Off-label,no,Depression,C,N,yes
+imipramine,Depression,Tofranil; Tofranil-PM,TCA,Antidepressant,6.9,34,Rx,On-label,no,Depression,N,N,yes
+doxepin,Depression,Sinequan,TCA,Antidepressant,7.2,31,Rx,On-label,no,Depression; Major depressive disorder,N,N,yes
+fluoxetine / olanzapine,Depression,Symbyax,Antidepressant combination,Antidepressant,7.7,26,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+desipramine,Depression,Norpramin,TCA,Antidepressant,9.1,18,Rx,On-label,no,Depression,N,N,yes
+paliperidone,Depression,Invega,Atypical antipsychotic,Antipsychotic,3.4,12,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+atomoxetine,Depression,Strattera,Stimulant / wakefulness / ADHD,Other prescription,6.5,8,Rx,Off-label,no,Depression,C,N,no
+isocarboxazid,Depression,Marplan,MAOI,Antidepressant,9.3,8,Rx,On-label,no,Depression,C,N,yes
+amitriptyline / chlordiazepoxide,Depression,Limbitrol,Antidepressant combination,Antidepressant,9.6,5,Rx,On-label,no,Depression,N,4,yes
+amoxapine,Depression,Asendin,TCA,Antidepressant,9.6,5,Rx,On-label,no,Depression,C,N,yes
+protriptyline,Depression,Vivactil,TCA,Antidepressant,9.0,4,Rx,On-label,no,Depression,N,N,yes
+trimipramine,Depression,Surmontil,TCA,Antidepressant,9.5,2,Rx,On-label,no,Depression,C,N,yes
+amitriptyline / perphenazine,Depression,Etrafon; Triavil,Antidepressant combination,Antidepressant,9.0,1,Rx,On-label,no,Depression,N,N,yes
+thyroid desiccated,Depression,Armour Thyroid; NP Thyroid,Thyroid hormone,Other prescription,,0,Rx,Off-label,no,Depression,A,N,no
+gotu kola,Depression,,Herbal,Supplement,,0,,Off-label,no,Depression,N,U,no
+valerian,Depression,,Herbal,Supplement,,0,OTC,Off-label,no,Depression,N,N,yes
+bupropion,Major depression,Wellbutrin XL; Wellbutrin SR; Forfivo XL; Budeprion SR; Aplenzin; Wellbutrin; Zyban,NDRI,Antidepressant,7.0,1867,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+sertraline,Major depression,Zoloft,SSRI,Antidepressant,6.9,1536,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+venlafaxine,Major depression,Effexor XR; Effexor,SNRI,Antidepressant,6.2,1317,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+escitalopram,Major depression,Lexapro,SSRI,Antidepressant,7.0,1134,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+desvenlafaxine,Major depression,Pristiq; Khedezla,SNRI,Antidepressant,6.8,1072,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+duloxetine,Major depression,Cymbalta; Irenka; Drizalma Sprinkle,SNRI,Antidepressant,6.3,929,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+fluoxetine,Major depression,Prozac; Sarafem,SSRI,Antidepressant,7.0,894,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+vilazodone,Major depression,Viibryd,Serotonin modulator,Antidepressant,5.9,885,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+mirtazapine,Major depression,Remeron; Remeron SolTab,Tetracyclic (NaSSA),Antidepressant,6.8,871,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+citalopram,Major depression,Celexa,SSRI,Antidepressant,7.2,739,Rx,On-label,no,Depression; Bipolar disorder,C,N,yes
+vortioxetine,Major depression,Trintellix,Serotonin modulator,Antidepressant,6.3,647,Rx,On-label,no,Major depressive disorder,C,N,yes
+aripiprazole,Major depression,Abilify; Opipza; Abilify Maintena; Abilify Asimtufii,Atypical antipsychotic,Antipsychotic,6.4,553,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+brexpiprazole,Major depression,Rexulti,Atypical antipsychotic,Antipsychotic,6.7,490,Rx,On-label,no,Depression; Major depressive disorder,,N,yes
+paroxetine,Major depression,Paxil; Paxil CR; Pexeva,SSRI,Antidepressant,6.7,356,Rx,On-label,no,Depression; Major depressive disorder,D,N,yes
+quetiapine,Major depression,Seroquel XR; Seroquel,Atypical antipsychotic,Antipsychotic,6.5,254,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+tramadol,Major depression,Ultram,Opioid,Other prescription,9.2,247,Rx,Off-label,no,Depression,C,4,yes
+olanzapine,Major depression,Zyprexa; Zyprexa Zydis,Atypical antipsychotic,Antipsychotic,5.1,239,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+levomilnacipran,Major depression,Fetzima,SNRI,Antidepressant,5.1,214,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+bupropion / dextromethorphan,Major depression,Auvelity,NMDA antagonist,Antidepressant,8.4,199,Rx,On-label,no,Major depressive disorder,,N,yes
+lamotrigine,Major depression,Lamlique; Lamictal; Lamictal ODT; Subvenite; Lamictal CD; Lamictal XR,Mood stabilizer,Mood stabilizer / anticonvulsant,7.2,191,Rx,Off-label,yes,Depression; Bipolar disorder,C,N,yes
+trazodone,Major depression,Raldesy; Desyrel; Oleptro,Serotonin modulator,Antidepressant,6.7,181,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+amitriptyline,Major depression,Elavil,TCA,Antidepressant,8.0,145,Rx,On-label,no,Depression,C,N,yes
+phenelzine,Major depression,Nardil,MAOI,Antidepressant,8.4,145,Rx,On-label,no,Depression,C,N,yes
+esketamine,Major depression,Spravato,NMDA antagonist,Antidepressant,6.1,142,Rx,On-label,no,Depression; Major depressive disorder,,3,yes
+l-methylfolate,Major depression,Deplin; XaQuil XR; L-Methylfolate Forte,Vitamin / medical food,Supplement,7.6,140,Rx/OTC,On-label,no,Depression,N,N,no
+st. john's wort,Major depression,,Herbal,Supplement,7.8,138,OTC,On-label,no,Depression,N,N,yes
+tranylcypromine,Major depression,Parnate,MAOI,Antidepressant,8.4,131,Rx,On-label,no,Depression,N,N,yes
+nefazodone,Major depression,Serzone,Serotonin modulator,Antidepressant,9.1,116,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+alprazolam,Major depression,Xanax,Benzodiazepine,Other prescription,8.6,106,Rx,Off-label,no,Depression,D,4,yes
+cariprazine,Major depression,Vraylar,Atypical antipsychotic,Antipsychotic,7.0,100,Rx,On-label,no,Major depressive disorder; Bipolar disorder,,N,yes
+modafinil,Major depression,Provigil,Stimulant / wakefulness / ADHD,Other prescription,8.7,77,Rx,Off-label,no,Depression,C,4,no
+methylphenidate,Major depression,Methylin ER; Ritalin; Concerta,Stimulant / wakefulness / ADHD,Other prescription,8.7,71,Rx,On-label,no,Depression,C,2,yes
+nortriptyline,Major depression,Pamelor; Aventyl,TCA,Antidepressant,6.6,69,Rx,On-label,no,Depression,N,N,yes
+lithium,Major depression,Lithobid,Mood stabilizer,Mood stabilizer / anticonvulsant,6.1,67,Rx,Off-label,no,Depression; Bipolar disorder,D,N,yes
+selegiline,Major depression,Emsam; Eldepryl; Zelapar,MAOI,Antidepressant,7.7,61,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+niacin,Major depression,Niaspan,Vitamin / medical food,Supplement,8.3,59,Rx/OTC,Off-label,no,Depression,C,N,yes
+risperidone,Major depression,Risperdal; Risperdal Consta; Rykindo; Uzedy,Atypical antipsychotic,Antipsychotic,4.9,55,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+clomipramine,Major depression,Anafranil,TCA,Antidepressant,7.2,52,Rx,Off-label,no,Depression,C,N,yes
+armodafinil,Major depression,Nuvigil,Stimulant / wakefulness / ADHD,Other prescription,8.2,47,Rx,Off-label,no,Depression; Bipolar disorder,C,4,no
+ketamine,Major depression,Ketalar,NMDA antagonist,Antidepressant,8.1,38,Rx,Off-label,no,Depression,N,3,yes
+fluoxetine / olanzapine,Major depression,Symbyax,Antidepressant combination,Antidepressant,7.7,38,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+doxepin,Major depression,Sinequan,TCA,Antidepressant,7.3,36,Rx,On-label,no,Depression; Major depressive disorder,N,N,yes
+lisdexamfetamine,Major depression,Vyvanse,Stimulant / wakefulness / ADHD,Other prescription,8.7,36,Rx,Off-label,no,Depression,C,2,yes
+fluvoxamine,Major depression,Luvox,SSRI,Antidepressant,6.6,34,Rx,Off-label,no,Depression,C,N,yes
+imipramine,Major depression,Tofranil; Tofranil-PM,TCA,Antidepressant,6.9,34,Rx,On-label,no,Depression,N,N,yes
+desipramine,Major depression,Norpramin,TCA,Antidepressant,9.1,18,Rx,On-label,no,Depression,N,N,yes
+paliperidone,Major depression,Invega,Atypical antipsychotic,Antipsychotic,3.4,12,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+lumateperone,Major depression,Caplyta,Atypical antipsychotic,Antipsychotic,7.5,10,Rx,On-label,yes,Major depressive disorder; Bipolar disorder,,N,yes
+atomoxetine,Major depression,Strattera,Stimulant / wakefulness / ADHD,Other prescription,6.5,8,Rx,Off-label,no,Depression,C,N,no
+isocarboxazid,Major depression,Marplan,MAOI,Antidepressant,9.3,8,Rx,On-label,no,Depression,C,N,yes
+amitriptyline / chlordiazepoxide,Major depression,Limbitrol,Antidepressant combination,Antidepressant,9.6,5,Rx,On-label,no,Depression,N,4,yes
+amoxapine,Major depression,Asendin,TCA,Antidepressant,9.6,5,Rx,On-label,no,Depression,C,N,yes
+protriptyline,Major depression,Vivactil,TCA,Antidepressant,9.0,4,Rx,On-label,no,Depression,N,N,yes
+trimipramine,Major depression,Surmontil,TCA,Antidepressant,9.5,2,Rx,On-label,no,Depression,C,N,yes
+amitriptyline / perphenazine,Major depression,Etrafon; Triavil,Antidepressant combination,Antidepressant,9.0,1,Rx,On-label,no,Depression,N,N,yes
+gepirone,Major depression,Exxua,Serotonin modulator,Antidepressant,10.0,1,Rx,On-label,no,Major depressive disorder,,N,no
+thyroid desiccated,Major depression,Armour Thyroid; NP Thyroid,Thyroid hormone,Other prescription,,0,Rx,Off-label,no,Depression,A,N,no
+gotu kola,Major depression,,Herbal,Supplement,,0,,Off-label,no,Depression,N,U,no
+valerian,Major depression,,Herbal,Supplement,,0,OTC,Off-label,no,Depression,N,N,yes
+vortioxetine,Major depressive disorder,Trintellix,Serotonin modulator,Antidepressant,6.3,647,Rx,On-label,no,Major depressive disorder,C,N,yes
+bupropion,Major depressive disorder,Wellbutrin XL; Wellbutrin SR; Forfivo XL; Budeprion SR; Aplenzin; Wellbutrin; Zyban,NDRI,Antidepressant,6.9,458,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+brexpiprazole,Major depressive disorder,Rexulti,Atypical antipsychotic,Antipsychotic,6.5,295,Rx,On-label,no,Depression; Major depressive disorder,,N,yes
+venlafaxine,Major depressive disorder,Effexor XR; Effexor,SNRI,Antidepressant,6.4,273,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+vilazodone,Major depressive disorder,Viibryd,Serotonin modulator,Antidepressant,5.6,250,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+sertraline,Major depressive disorder,Zoloft,SSRI,Antidepressant,6.8,240,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+mirtazapine,Major depressive disorder,Remeron; Remeron SolTab,Tetracyclic (NaSSA),Antidepressant,7.0,199,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+bupropion / dextromethorphan,Major depressive disorder,Auvelity,NMDA antagonist,Antidepressant,8.4,199,Rx,On-label,no,Major depressive disorder,,N,yes
+desvenlafaxine,Major depressive disorder,Pristiq; Khedezla,SNRI,Antidepressant,6.2,195,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+escitalopram,Major depressive disorder,Lexapro,SSRI,Antidepressant,6.6,180,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+aripiprazole,Major depressive disorder,Abilify; Opipza; Abilify Maintena; Abilify Asimtufii,Atypical antipsychotic,Antipsychotic,6.3,165,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+duloxetine,Major depressive disorder,Cymbalta; Irenka; Drizalma Sprinkle,SNRI,Antidepressant,6.2,158,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+fluoxetine,Major depressive disorder,Prozac; Sarafem,SSRI,Antidepressant,6.7,146,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+levomilnacipran,Major depressive disorder,Fetzima,SNRI,Antidepressant,5.2,112,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+cariprazine,Major depressive disorder,Vraylar,Atypical antipsychotic,Antipsychotic,7.0,100,Rx,On-label,no,Major depressive disorder; Bipolar disorder,,N,yes
+esketamine,Major depressive disorder,Spravato,NMDA antagonist,Antidepressant,6.8,67,Rx,On-label,no,Depression; Major depressive disorder,,3,yes
+quetiapine,Major depressive disorder,Seroquel XR; Seroquel,Atypical antipsychotic,Antipsychotic,6.6,62,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+paroxetine,Major depressive disorder,Paxil; Paxil CR; Pexeva,SSRI,Antidepressant,7.5,56,Rx,On-label,no,Depression; Major depressive disorder,D,N,yes
+olanzapine,Major depressive disorder,Zyprexa; Zyprexa Zydis,Atypical antipsychotic,Antipsychotic,5.8,53,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+trazodone,Major depressive disorder,Raldesy; Desyrel; Oleptro,Serotonin modulator,Antidepressant,6.5,36,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+nefazodone,Major depressive disorder,Serzone,Serotonin modulator,Antidepressant,9.0,33,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+selegiline,Major depressive disorder,Emsam; Eldepryl; Zelapar,MAOI,Antidepressant,6.5,17,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+fluoxetine / olanzapine,Major depressive disorder,Symbyax,Antidepressant combination,Antidepressant,7.8,12,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+lumateperone,Major depressive disorder,Caplyta,Atypical antipsychotic,Antipsychotic,7.5,10,Rx,On-label,yes,Major depressive disorder; Bipolar disorder,,N,yes
+doxepin,Major depressive disorder,Sinequan,TCA,Antidepressant,7.6,5,Rx,On-label,no,Depression; Major depressive disorder,N,N,yes
+gepirone,Major depressive disorder,Exxua,Serotonin modulator,Antidepressant,10.0,1,Rx,On-label,no,Major depressive disorder,,N,no
+bupropion,Total,Wellbutrin XL; Wellbutrin SR; Forfivo XL; Budeprion SR; Aplenzin; Wellbutrin; Zyban,NDRI,Antidepressant,7.0,1960,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+sertraline,Total,Zoloft,SSRI,Antidepressant,6.9,1591,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+venlafaxine,Total,Effexor XR; Effexor,SNRI,Antidepressant,6.2,1394,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+lamotrigine,Total,Lamlique; Lamictal; Lamictal ODT; Subvenite; Lamictal CD; Lamictal XR,Mood stabilizer,Mood stabilizer / anticonvulsant,7.9,1303,Rx,On-label,yes,Depression; Bipolar disorder,C,N,yes
+escitalopram,Total,Lexapro,SSRI,Antidepressant,7.0,1195,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+desvenlafaxine,Total,Pristiq; Khedezla,SNRI,Antidepressant,6.8,1094,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+aripiprazole,Total,Abilify; Opipza; Abilify Maintena; Abilify Asimtufii,Atypical antipsychotic,Antipsychotic,6.1,1014,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+quetiapine,Total,Seroquel XR; Seroquel,Atypical antipsychotic,Antipsychotic,7.0,983,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+duloxetine,Total,Cymbalta; Irenka; Drizalma Sprinkle,SNRI,Antidepressant,6.3,980,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+fluoxetine,Total,Prozac; Sarafem,SSRI,Antidepressant,7.0,894,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+vilazodone,Total,Viibryd,Serotonin modulator,Antidepressant,5.9,885,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+mirtazapine,Total,Remeron; Remeron SolTab,Tetracyclic (NaSSA),Antidepressant,6.8,871,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+citalopram,Total,Celexa,SSRI,Antidepressant,7.2,753,Rx,On-label,no,Depression; Bipolar disorder,C,N,yes
+lurasidone,Total,Latuda,Atypical antipsychotic,Antipsychotic,6.3,734,Rx,On-label,no,Bipolar disorder,B,N,yes
+vortioxetine,Total,Trintellix,Serotonin modulator,Antidepressant,6.3,647,Rx,On-label,no,Major depressive disorder,C,N,yes
+cariprazine,Total,Vraylar,Atypical antipsychotic,Antipsychotic,6.3,587,Rx,On-label,no,Major depressive disorder; Bipolar disorder,,N,yes
+olanzapine,Total,Zyprexa; Zyprexa Zydis,Atypical antipsychotic,Antipsychotic,5.9,577,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+brexpiprazole,Total,Rexulti,Atypical antipsychotic,Antipsychotic,6.7,490,Rx,On-label,no,Depression; Major depressive disorder,,N,yes
+lithium,Total,Lithobid,Mood stabilizer,Mood stabilizer / anticonvulsant,7.1,433,Rx,On-label,no,Depression; Bipolar disorder,D,N,yes
+paroxetine,Total,Paxil; Paxil CR; Pexeva,SSRI,Antidepressant,6.7,356,Rx,On-label,no,Depression; Major depressive disorder,D,N,yes
+ziprasidone,Total,Geodon,Atypical antipsychotic,Antipsychotic,5.8,302,Rx,On-label,no,Bipolar disorder,C,N,yes
+divalproex sodium,Total,Depakote; Depakote ER,Mood stabilizer,Mood stabilizer / anticonvulsant,6.6,289,Rx,On-label,no,Bipolar disorder,D,N,yes
+asenapine,Total,Saphris,Atypical antipsychotic,Antipsychotic,7.2,254,Rx,On-label,no,Bipolar disorder,C,N,yes
+tramadol,Total,Ultram,Opioid,Other prescription,9.2,247,Rx,Off-label,no,Depression,C,4,yes
+risperidone,Total,Risperdal; Risperdal Consta; Rykindo; Uzedy,Atypical antipsychotic,Antipsychotic,5.8,242,Rx,On-label,no,Depression; Bipolar disorder,C,N,yes
+levomilnacipran,Total,Fetzima,SNRI,Antidepressant,5.1,214,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+bupropion / dextromethorphan,Total,Auvelity,NMDA antagonist,Antidepressant,8.4,199,Rx,On-label,no,Major depressive disorder,,N,yes
+trazodone,Total,Raldesy; Desyrel; Oleptro,Serotonin modulator,Antidepressant,6.7,181,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+oxcarbazepine,Total,Trileptal; Oxtellar XR,Other anticonvulsant,Mood stabilizer / anticonvulsant,8.1,171,Rx,Off-label,no,Bipolar disorder,C,N,yes
+lumateperone,Total,Caplyta,Atypical antipsychotic,Antipsychotic,6.9,160,Rx,On-label,yes,Major depressive disorder; Bipolar disorder,,N,yes
+amitriptyline,Total,Elavil,TCA,Antidepressant,8.0,145,Rx,On-label,no,Depression,C,N,yes
+phenelzine,Total,Nardil,MAOI,Antidepressant,8.4,145,Rx,On-label,no,Depression,C,N,yes
+gabapentin,Total,Neurontin; Gralise,Other anticonvulsant,Mood stabilizer / anticonvulsant,8.5,145,Rx,Off-label,no,Bipolar disorder,C,N,yes
+esketamine,Total,Spravato,NMDA antagonist,Antidepressant,6.1,142,Rx,On-label,no,Depression; Major depressive disorder,,3,yes
+l-methylfolate,Total,Deplin; XaQuil XR; L-Methylfolate Forte,Vitamin / medical food,Supplement,7.6,140,Rx/OTC,On-label,no,Depression,N,N,no
+st. john's wort,Total,,Herbal,Supplement,7.8,138,OTC,On-label,no,Depression,N,N,yes
+topiramate,Total,Topamax; Trokendi XR; Qudexy XR,Other anticonvulsant,Mood stabilizer / anticonvulsant,7.1,136,Rx,Off-label,no,Bipolar disorder,D,N,yes
+tranylcypromine,Total,Parnate,MAOI,Antidepressant,8.4,131,Rx,On-label,no,Depression,N,N,yes
+nefazodone,Total,Serzone,Serotonin modulator,Antidepressant,9.1,116,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+carbamazepine,Total,Equetro; Tegretol; Carbatrol,Mood stabilizer,Mood stabilizer / anticonvulsant,7.2,113,Rx,On-label,no,Bipolar disorder,D,N,yes
+alprazolam,Total,Xanax,Benzodiazepine,Other prescription,8.6,106,Rx,Off-label,no,Depression,D,4,yes
+clonazepam,Total,Klonopin,Benzodiazepine,Other prescription,8.8,100,Rx,Off-label,no,Bipolar disorder,D,4,yes
+fluoxetine / olanzapine,Total,Symbyax,Antidepressant combination,Antidepressant,7.6,86,Rx,On-label,no,Depression; Major depressive disorder; Bipolar disorder,C,N,yes
+modafinil,Total,Provigil,Stimulant / wakefulness / ADHD,Other prescription,8.7,77,Rx,Off-label,no,Depression,C,4,no
+methylphenidate,Total,Methylin ER; Ritalin; Concerta,Stimulant / wakefulness / ADHD,Other prescription,8.7,71,Rx,On-label,no,Depression,C,2,yes
+paliperidone,Total,Invega,Atypical antipsychotic,Antipsychotic,4.6,70,Rx,Off-label,no,Depression; Bipolar disorder,C,N,yes
+nortriptyline,Total,Pamelor; Aventyl,TCA,Antidepressant,6.6,69,Rx,On-label,no,Depression,N,N,yes
+armodafinil,Total,Nuvigil,Stimulant / wakefulness / ADHD,Other prescription,8.5,62,Rx,Off-label,no,Depression; Bipolar disorder,C,4,no
+selegiline,Total,Emsam; Eldepryl; Zelapar,MAOI,Antidepressant,7.7,61,Rx,On-label,no,Depression; Major depressive disorder,C,N,yes
+niacin,Total,Niaspan,Vitamin / medical food,Supplement,8.3,59,Rx/OTC,Off-label,no,Depression,C,N,yes
+clomipramine,Total,Anafranil,TCA,Antidepressant,7.2,52,Rx,Off-label,no,Depression,C,N,yes
+ketamine,Total,Ketalar,NMDA antagonist,Antidepressant,8.1,38,Rx,Off-label,no,Depression,N,3,yes
+doxepin,Total,Sinequan,TCA,Antidepressant,7.3,36,Rx,On-label,no,Depression; Major depressive disorder,N,N,yes
+lisdexamfetamine,Total,Vyvanse,Stimulant / wakefulness / ADHD,Other prescription,8.7,36,Rx,Off-label,no,Depression,C,2,yes
+fluvoxamine,Total,Luvox,SSRI,Antidepressant,6.6,34,Rx,Off-label,no,Depression,C,N,yes
+imipramine,Total,Tofranil; Tofranil-PM,TCA,Antidepressant,6.9,34,Rx,On-label,no,Depression,N,N,yes
+valproic acid,Total,Depakene,Mood stabilizer,Mood stabilizer / anticonvulsant,6.1,30,Rx,On-label,no,Bipolar disorder,D,N,yes
+olanzapine / samidorphan,Total,Lybalvi,Atypical antipsychotic,Antipsychotic,7.4,24,Rx,On-label,no,Bipolar disorder,,N,yes
+desipramine,Total,Norpramin,TCA,Antidepressant,9.1,18,Rx,On-label,no,Depression,N,N,yes
+iloperidone,Total,Fanapt,Atypical antipsychotic,Antipsychotic,9.3,18,Rx,On-label,no,Bipolar disorder,C,N,yes
+perphenazine,Total,Trilafon,Typical antipsychotic,Antipsychotic,7.2,13,Rx,Off-label,no,Bipolar disorder,N,N,yes
+clonidine,Total,Catapres; Kapvay,Blood pressure medicine,Other prescription,7.6,10,Rx,Off-label,no,Bipolar disorder,C,N,yes
+atomoxetine,Total,Strattera,Stimulant / wakefulness / ADHD,Other prescription,6.5,8,Rx,Off-label,no,Depression,C,N,no
+isocarboxazid,Total,Marplan,MAOI,Antidepressant,9.3,8,Rx,On-label,no,Depression,C,N,yes
+levetiracetam,Total,Keppra,Other anticonvulsant,Mood stabilizer / anticonvulsant,6.6,8,Rx,Off-label,no,Bipolar disorder,C,N,yes
+amitriptyline / chlordiazepoxide,Total,Limbitrol,Antidepressant combination,Antidepressant,9.6,5,Rx,On-label,no,Depression,N,4,yes
+amoxapine,Total,Asendin,TCA,Antidepressant,9.6,5,Rx,On-label,no,Depression,C,N,yes
+protriptyline,Total,Vivactil,TCA,Antidepressant,9.0,4,Rx,On-label,no,Depression,N,N,yes
+tiagabine,Total,Gabitril,Other anticonvulsant,Mood stabilizer / anticonvulsant,10.0,3,Rx,Off-label,no,Bipolar disorder,C,N,yes
+trimipramine,Total,Surmontil,TCA,Antidepressant,9.5,2,Rx,On-label,no,Depression,C,N,yes
+amitriptyline / perphenazine,Total,Etrafon; Triavil,Antidepressant combination,Antidepressant,9.0,1,Rx,On-label,no,Depression,N,N,yes
+gepirone,Total,Exxua,Serotonin modulator,Antidepressant,10.0,1,Rx,On-label,no,Major depressive disorder,,N,no
+verapamil,Total,Calan; Verelan,Blood pressure medicine,Other prescription,8.0,1,Rx,Off-label,no,Bipolar disorder,C,N,yes
+thyroid desiccated,Total,Armour Thyroid; NP Thyroid,Thyroid hormone,Other prescription,,0,Rx,Off-label,no,Depression,A,N,no
+gotu kola,Total,,Herbal,Supplement,,0,,Off-label,no,Depression,N,U,no
+valerian,Total,,Herbal,Supplement,,0,OTC,Off-label,no,Depression,N,N,yes
+milsaperidone,Total,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,yes,Bipolar disorder,,N,yes

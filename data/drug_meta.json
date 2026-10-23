@@ -1,0 +1,377 @@
+{
+ "brand_to_generic": {
+  "Cymbalta": "duloxetine",
+  "Irenka": "duloxetine",
+  "Lexapro": "escitalopram",
+  "Zoloft": "sertraline",
+  "Wellbutrin XL": "bupropion",
+  "Wellbutrin SR": "bupropion",
+  "Forfivo XL": "bupropion",
+  "Budeprion SR": "bupropion",
+  "Aplenzin": "bupropion",
+  "Prozac": "fluoxetine",
+  "Celexa": "citalopram",
+  "Rexulti": "brexpiprazole",
+  "Abilify": "aripiprazole",
+  "Effexor XR": "venlafaxine",
+  "Effexor": "venlafaxine",
+  "Pristiq": "desvenlafaxine",
+  "Paxil": "paroxetine",
+  "Paxil CR": "paroxetine",
+  "Remeron": "mirtazapine",
+  "Remeron SolTab": "mirtazapine",
+  "Viibryd": "vilazodone",
+  "Seroquel XR": "quetiapine",
+  "Deplin": "l-methylfolate",
+  "XaQuil XR": "l-methylfolate",
+  "L-Methylfolate Forte": "l-methylfolate",
+  "Zyprexa": "olanzapine",
+  "Zyprexa Zydis": "olanzapine",
+  "Raldesy": "trazodone",
+  "Fetzima": "levomilnacipran",
+  "Methylin ER": "methylphenidate",
+  "Norpramin": "desipramine",
+  "Nardil": "phenelzine",
+  "Parnate": "tranylcypromine",
+  "Symbyax": "fluoxetine / olanzapine",
+  "Emsam": "selegiline",
+  "Pamelor": "nortriptyline",
+  "Marplan": "isocarboxazid",
+  "Spravato": "esketamine",
+  "Tofranil": "imipramine",
+  "Trintellix": "vortioxetine",
+  "Auvelity": "bupropion / dextromethorphan",
+  "Caplyta": "lumateperone",
+  "Vraylar": "cariprazine",
+  "Opipza": "aripiprazole",
+  "Exxua": "gepirone",
+  "Lamictal": "lamotrigine",
+  "Lamictal ODT": "lamotrigine",
+  "Lamictal CD": "lamotrigine",
+  "Lamlique": "lamotrigine",
+  "Subvenite": "lamotrigine",
+  "Seroquel": "quetiapine",
+  "Abilify Maintena": "aripiprazole",
+  "Abilify Asimtufii": "aripiprazole",
+  "Lybalvi": "olanzapine / samidorphan",
+  "Latuda": "lurasidone",
+  "Fanapt": "iloperidone",
+  "Bysanti": "milsaperidone",
+  "Depakote": "divalproex sodium",
+  "Depakote ER": "divalproex sodium",
+  "Risperdal": "risperidone",
+  "Risperdal Consta": "risperidone",
+  "Rykindo": "risperidone",
+  "Uzedy": "risperidone",
+  "Geodon": "ziprasidone",
+  "Saphris": "asenapine",
+  "Equetro": "carbamazepine",
+  "Lithobid": "lithium"
+ },
+ "drug_class": {
+  "sertraline": "SSRI",
+  "fluoxetine": "SSRI",
+  "citalopram": "SSRI",
+  "escitalopram": "SSRI",
+  "paroxetine": "SSRI",
+  "fluvoxamine": "SSRI",
+  "venlafaxine": "SNRI",
+  "desvenlafaxine": "SNRI",
+  "duloxetine": "SNRI",
+  "levomilnacipran": "SNRI",
+  "bupropion": "NDRI",
+  "trazodone": "Serotonin modulator",
+  "nefazodone": "Serotonin modulator",
+  "vilazodone": "Serotonin modulator",
+  "vortioxetine": "Serotonin modulator",
+  "gepirone": "Serotonin modulator",
+  "mirtazapine": "Tetracyclic (NaSSA)",
+  "amitriptyline": "TCA",
+  "nortriptyline": "TCA",
+  "desipramine": "TCA",
+  "doxepin": "TCA",
+  "imipramine": "TCA",
+  "clomipramine": "TCA",
+  "protriptyline": "TCA",
+  "trimipramine": "TCA",
+  "amoxapine": "TCA",
+  "phenelzine": "MAOI",
+  "tranylcypromine": "MAOI",
+  "isocarboxazid": "MAOI",
+  "selegiline": "MAOI",
+  "ketamine": "NMDA antagonist",
+  "esketamine": "NMDA antagonist",
+  "bupropion / dextromethorphan": "NMDA antagonist",
+  "fluoxetine / olanzapine": "Antidepressant combination",
+  "amitriptyline / chlordiazepoxide": "Antidepressant combination",
+  "amitriptyline / perphenazine": "Antidepressant combination",
+  "brexpiprazole": "Atypical antipsychotic",
+  "aripiprazole": "Atypical antipsychotic",
+  "quetiapine": "Atypical antipsychotic",
+  "olanzapine": "Atypical antipsychotic",
+  "risperidone": "Atypical antipsychotic",
+  "paliperidone": "Atypical antipsychotic",
+  "cariprazine": "Atypical antipsychotic",
+  "lumateperone": "Atypical antipsychotic",
+  "lurasidone": "Atypical antipsychotic",
+  "ziprasidone": "Atypical antipsychotic",
+  "asenapine": "Atypical antipsychotic",
+  "iloperidone": "Atypical antipsychotic",
+  "milsaperidone": "Atypical antipsychotic",
+  "olanzapine / samidorphan": "Atypical antipsychotic",
+  "perphenazine": "Typical antipsychotic",
+  "lithium": "Mood stabilizer",
+  "lamotrigine": "Mood stabilizer",
+  "divalproex sodium": "Mood stabilizer",
+  "valproic acid": "Mood stabilizer",
+  "carbamazepine": "Mood stabilizer",
+  "gabapentin": "Other anticonvulsant",
+  "oxcarbazepine": "Other anticonvulsant",
+  "topiramate": "Other anticonvulsant",
+  "levetiracetam": "Other anticonvulsant",
+  "tiagabine": "Other anticonvulsant",
+  "methylphenidate": "Stimulant / wakefulness / ADHD",
+  "lisdexamfetamine": "Stimulant / wakefulness / ADHD",
+  "modafinil": "Stimulant / wakefulness / ADHD",
+  "armodafinil": "Stimulant / wakefulness / ADHD",
+  "atomoxetine": "Stimulant / wakefulness / ADHD",
+  "alprazolam": "Benzodiazepine",
+  "clonazepam": "Benzodiazepine",
+  "thyroid desiccated": "Thyroid hormone",
+  "tramadol": "Opioid",
+  "clonidine": "Blood pressure medicine",
+  "verapamil": "Blood pressure medicine",
+  "l-methylfolate": "Vitamin / medical food",
+  "niacin": "Vitamin / medical food",
+  "st. john's wort": "Herbal",
+  "gotu kola": "Herbal",
+  "valerian": "Herbal"
+ },
+ "class_group": {
+  "sertraline": "Antidepressant",
+  "fluoxetine": "Antidepressant",
+  "citalopram": "Antidepressant",
+  "escitalopram": "Antidepressant",
+  "paroxetine": "Antidepressant",
+  "fluvoxamine": "Antidepressant",
+  "venlafaxine": "Antidepressant",
+  "desvenlafaxine": "Antidepressant",
+  "duloxetine": "Antidepressant",
+  "levomilnacipran": "Antidepressant",
+  "bupropion": "Antidepressant",
+  "trazodone": "Antidepressant",
+  "nefazodone": "Antidepressant",
+  "vilazodone": "Antidepressant",
+  "vortioxetine": "Antidepressant",
+  "gepirone": "Antidepressant",
+  "mirtazapine": "Antidepressant",
+  "amitriptyline": "Antidepressant",
+  "nortriptyline": "Antidepressant",
+  "desipramine": "Antidepressant",
+  "doxepin": "Antidepressant",
+  "imipramine": "Antidepressant",
+  "clomipramine": "Antidepressant",
+  "protriptyline": "Antidepressant",
+  "trimipramine": "Antidepressant",
+  "amoxapine": "Antidepressant",
+  "phenelzine": "Antidepressant",
+  "tranylcypromine": "Antidepressant",
+  "isocarboxazid": "Antidepressant",
+  "selegiline": "Antidepressant",
+  "ketamine": "Antidepressant",
+  "esketamine": "Antidepressant",
+  "bupropion / dextromethorphan": "Antidepressant",
+  "fluoxetine / olanzapine": "Antidepressant",
+  "amitriptyline / chlordiazepoxide": "Antidepressant",
+  "amitriptyline / perphenazine": "Antidepressant",
+  "brexpiprazole": "Antipsychotic",
+  "aripiprazole": "Antipsychotic",
+  "quetiapine": "Antipsychotic",
+  "olanzapine": "Antipsychotic",
+  "risperidone": "Antipsychotic",
+  "paliperidone": "Antipsychotic",
+  "cariprazine": "Antipsychotic",
+  "lumateperone": "Antipsychotic",
+  "lurasidone": "Antipsychotic",
+  "ziprasidone": "Antipsychotic",
+  "asenapine": "Antipsychotic",
+  "iloperidone": "Antipsychotic",
+  "milsaperidone": "Antipsychotic",
+  "olanzapine / samidorphan": "Antipsychotic",
+  "perphenazine": "Antipsychotic",
+  "lithium": "Mood stabilizer / anticonvulsant",
+  "lamotrigine": "Mood stabilizer / anticonvulsant",
+  "divalproex sodium": "Mood stabilizer / anticonvulsant",
+  "valproic acid": "Mood stabilizer / anticonvulsant",
+  "carbamazepine": "Mood stabilizer / anticonvulsant",
+  "gabapentin": "Mood stabilizer / anticonvulsant",
+  "oxcarbazepine": "Mood stabilizer / anticonvulsant",
+  "topiramate": "Mood stabilizer / anticonvulsant",
+  "levetiracetam": "Mood stabilizer / anticonvulsant",
+  "tiagabine": "Mood stabilizer / anticonvulsant",
+  "methylphenidate": "Other prescription",
+  "lisdexamfetamine": "Other prescription",
+  "modafinil": "Other prescription",
+  "armodafinil": "Other prescription",
+  "atomoxetine": "Other prescription",
+  "alprazolam": "Other prescription",
+  "clonazepam": "Other prescription",
+  "thyroid desiccated": "Other prescription",
+  "tramadol": "Other prescription",
+  "clonidine": "Other prescription",
+  "verapamil": "Other prescription",
+  "l-methylfolate": "Supplement",
+  "niacin": "Supplement",
+  "st. john's wort": "Supplement",
+  "gotu kola": "Supplement",
+  "valerian": "Supplement"
+ },
+ "groups": [
+  "Antidepressant",
+  "Antipsychotic",
+  "Mood stabilizer / anticonvulsant",
+  "Other prescription",
+  "Supplement"
+ ],
+ "other_brands": {
+  "bupropion": [
+   "Wellbutrin",
+   "Zyban"
+  ],
+  "duloxetine": [
+   "Drizalma Sprinkle"
+  ],
+  "fluoxetine": [
+   "Sarafem"
+  ],
+  "desvenlafaxine": [
+   "Khedezla"
+  ],
+  "armodafinil": [
+   "Nuvigil"
+  ],
+  "trazodone": [
+   "Desyrel",
+   "Oleptro"
+  ],
+  "amitriptyline": [
+   "Elavil"
+  ],
+  "lamotrigine": [
+   "Lamictal XR"
+  ],
+  "paroxetine": [
+   "Pexeva"
+  ],
+  "alprazolam": [
+   "Xanax"
+  ],
+  "tramadol": [
+   "Ultram"
+  ],
+  "methylphenidate": [
+   "Ritalin",
+   "Concerta"
+  ],
+  "nefazodone": [
+   "Serzone"
+  ],
+  "nortriptyline": [
+   "Aventyl"
+  ],
+  "modafinil": [
+   "Provigil"
+  ],
+  "doxepin": [
+   "Sinequan"
+  ],
+  "fluvoxamine": [
+   "Luvox"
+  ],
+  "niacin": [
+   "Niaspan"
+  ],
+  "amitriptyline / chlordiazepoxide": [
+   "Limbitrol"
+  ],
+  "amoxapine": [
+   "Asendin"
+  ],
+  "ketamine": [
+   "Ketalar"
+  ],
+  "lisdexamfetamine": [
+   "Vyvanse"
+  ],
+  "atomoxetine": [
+   "Strattera"
+  ],
+  "clomipramine": [
+   "Anafranil"
+  ],
+  "imipramine": [
+   "Tofranil-PM"
+  ],
+  "amitriptyline / perphenazine": [
+   "Etrafon",
+   "Triavil"
+  ],
+  "paliperidone": [
+   "Invega"
+  ],
+  "protriptyline": [
+   "Vivactil"
+  ],
+  "selegiline": [
+   "Eldepryl",
+   "Zelapar"
+  ],
+  "thyroid desiccated": [
+   "Armour Thyroid",
+   "NP Thyroid"
+  ],
+  "trimipramine": [
+   "Surmontil"
+  ],
+  "valproic acid": [
+   "Depakene"
+  ],
+  "carbamazepine": [
+   "Tegretol",
+   "Carbatrol"
+  ],
+  "gabapentin": [
+   "Neurontin",
+   "Gralise"
+  ],
+  "oxcarbazepine": [
+   "Trileptal",
+   "Oxtellar XR"
+  ],
+  "topiramate": [
+   "Topamax",
+   "Trokendi XR",
+   "Qudexy XR"
+  ],
+  "levetiracetam": [
+   "Keppra"
+  ],
+  "tiagabine": [
+   "Gabitril"
+  ],
+  "clonazepam": [
+   "Klonopin"
+  ],
+  "clonidine": [
+   "Catapres",
+   "Kapvay"
+  ],
+  "verapamil": [
+   "Calan",
+   "Verelan"
+  ],
+  "perphenazine": [
+   "Trilafon"
+  ]
+ }
+}

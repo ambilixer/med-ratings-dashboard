@@ -1,0 +1,3 @@
+# Normalize line endings so Windows and Mac/Linux checkouts produce identical files
+* text=auto eol=lf
+*.png binary

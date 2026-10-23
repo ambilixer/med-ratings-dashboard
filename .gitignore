@@ -1,0 +1,16 @@
+# Raw Drugs.com page text: kept locally, not published (see data/raw/README.md)
+data/raw/*
+!data/raw/README.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
