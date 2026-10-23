@@ -277,7 +277,7 @@ body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-fami
     <label class="dx-field"><span>Rx / OTC</span>
       <select class="dx-select" id="dx-rx"><option value="all">All</option><option value="Rx">Rx</option><option value="OTC">OTC</option><option value="Rx/OTC">Rx/OTC</option></select></label>
     <div class="dx-field dx-f-wide"><span id="dx-scale-label">Reviews axis</span>
-      <div class="dx-seg" id="dx-scale" role="group" aria-labelledby="dx-scale-label"><button class="dx-btn" type="button" data-v="log">Log</button><button class="dx-btn" type="button" data-v="linear">Linear</button></div></div>
+      <div class="dx-seg" id="dx-scale" role="group" aria-labelledby="dx-scale-label"><button class="dx-btn" type="button" data-v="linear">Linear</button><button class="dx-btn" type="button" data-v="log">Log</button></div></div>
     <label class="dx-check"><input type="checkbox" id="dx-labels"> Name labels</label>
     <button class="dx-btn" type="button" id="dx-reset">Reset filters</button>
    </div>
@@ -731,7 +731,7 @@ milsaperidone,Total,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,
     'Major depression': [],
   };
   const MINS = [0, 10, 25, 50, 100, 250];
-  const DEFAULTS = { condition: 'Major depression', q: '', minReviews: 0, hidden: [], use: 'all', rx: 'all', xScale: 'log', labels: true, ratingMode: 'raw', display: 'chart' };
+  const DEFAULTS = { condition: 'Major depression', q: '', minReviews: 0, hidden: [], use: 'all', rx: 'all', xScale: 'linear', labels: true, ratingMode: 'raw', display: 'chart' };
   // Editorial notes, numbered on the chart. Text holds no figures; the chart and tooltips carry those.
   const CALLOUTS = {
     'Major depression': [
@@ -1014,7 +1014,7 @@ milsaperidone,Total,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,
       }
     });
     el('dx-cls-count').textContent = p.hidden.length ? ` (${p.hidden.length} hidden)` : '';
-    const nActive = [p.ratingMode !== 'raw', p.minReviews > 0, p.use !== 'all', p.rx !== 'all', p.xScale !== 'log', !p.labels].filter(Boolean).length;
+    const nActive = [p.ratingMode !== 'raw', p.minReviews > 0, p.use !== 'all', p.rx !== 'all', p.xScale !== 'linear', !p.labels].filter(Boolean).length;
     el('dx-more-count').textContent = nActive ? ` (${nActive})` : '';
     const list = p.display === 'list';
     chartBox.hidden = list;
@@ -1110,7 +1110,7 @@ milsaperidone,Total,Bysanti,Atypical antipsychotic,Antipsychotic,,0,Rx,On-label,
     svg.append('g').selectAll('text').data(xTicks).join('text').attr('class', 'dx-tick')
       .attr('x', (t) => x(t)).attr('y', y0 + 16).attr('text-anchor', 'middle').text((t) => fmt(t));
     svg.append('text').attr('class', 'dx-axis-title').attr('x', (x0 + x1) / 2).attr('y', H - 6).attr('text-anchor', 'middle')
-      .text(`Number of reviews (${p.xScale === 'linear' ? 'linear' : 'log'} scale)`);
+      .text(p.xScale === 'linear' ? 'Number of reviews' : 'Number of reviews (log scale)');
     svg.append('text').attr('class', 'dx-axis-title').attr('transform', `translate(12,${(y0 + y1) / 2}) rotate(-90)`)
       .attr('text-anchor', 'middle').text(p.ratingMode === 'adj' ? 'Adjusted rating' : 'Average rating');
 
