@@ -21,8 +21,8 @@
 .dx-btn { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); background: transparent; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); min-height: 2rem; cursor: pointer; font-variant-numeric: tabular-nums; }
 .dx-btn:hover { color: var(--color-fg); }
 /* Selected option: solid accent fill, so "on" reads differently from the plain text of "off" */
-.dx-btn[aria-pressed="true"], .dx-btn[aria-pressed="true"]:hover { color: var(--color-on-accent, #fff); background: var(--color-accent, #2563c9); font-weight: var(--cds-font-weight-medium); }
-.dx-check input { accent-color: var(--color-accent, #2563c9); }
+.dx-btn[aria-pressed="true"], .dx-btn[aria-pressed="true"]:hover { color: var(--color-on-accent, #1a1110); background: var(--color-accent, #8a960d); font-weight: var(--cds-font-weight-medium); }
+.dx-check input { accent-color: var(--color-accent, #8a960d); }
 .dx-more-btn[aria-expanded="true"] { color: var(--color-fg); background: var(--color-bg); }
 .dx-check { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg); min-height: 2rem; cursor: pointer; }
 
@@ -216,7 +216,7 @@
   <section class="dx-card" id="dx-class-card">
     <div class="dx-card-head">
       <h2 class="dx-h2" id="dx-class-title">Ratings by drug class</h2>
-      <p class="dx-note">Each dot is a drug and the dark bar is the class average, weighted by review count, so heavily reviewed drugs count for more. Uses every rated drug in the selected view; only the group and class filters apply.</p>
+      <p class="dx-note">Each dot is a drug and the bar is the class average, weighted by review count, so heavily reviewed drugs count for more. Uses every rated drug in the selected view; only the group and class filters apply.</p>
     </div>
     <div class="dx-rowchart dash-skeleton" id="dx-class-chart" data-source="class_summary drugs adjusted"></div>
   </section>

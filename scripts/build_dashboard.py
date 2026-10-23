@@ -7,9 +7,11 @@ Inlines everything into one file, so the page works offline and needs no server:
   dashboard/shell.html          page wrapper: theme colors, footer, and a small `dash` runtime
   dashboard/page.html           the dashboard itself (markup, styles, chart code)
   dashboard/vendor/d3.*.min.js  d3 v7 charting library
+  dashboard/fonts/*.woff        Fira Sans, Latin subset (SIL Open Font License)
   data/drugscom_ratings_long.csv
 """
 import re
+import base64
 import datetime as dt
 from pathlib import Path
 
@@ -21,6 +23,19 @@ SHELL = ROOT / "dashboard" / "shell.html"
 PAGE = ROOT / "dashboard" / "page.html"
 DATA = ROOT / "data" / "drugscom_ratings_long.csv"
 OUT = ROOT / "docs" / "index.html"
+FONTS = {400: "fira-sans-latin-400.woff", 500: "fira-sans-latin-500.woff"}
+
+
+def font_faces():
+    """@font-face rules with the font files inlined, so the page makes no outside requests."""
+    rules = []
+    for weight, name in FONTS.items():
+        b64 = base64.b64encode((ROOT / "dashboard" / "fonts" / name).read_bytes()).decode("ascii")
+        rules.append(
+            '@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: %d; font-display: swap; '
+            'src: url(data:font/woff;base64,%s) format("woff"); }' % (weight, b64)
+        )
+    return "\n".join(rules)
 
 
 def read(p):
@@ -43,6 +58,7 @@ def main():
 
     html = shell
     for token, value in {
+        "<!--FONTS-->": font_faces(),
         "<!--PAGE-->": page_body,
         "<!--PAGE_SCRIPTS-->": page_scripts,
         "<!--DATA_CSV-->": csv,

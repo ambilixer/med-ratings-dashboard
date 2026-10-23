@@ -41,6 +41,7 @@ dashboard/
   page.html                   the dashboard: markup, styles and chart code
   shell.html                  standalone wrapper: theme colors, footer, small data runtime
   vendor/                     d3 v7 (ISC license)
+  fonts/                      Fira Sans, Latin subset (SIL Open Font License)
 docs/
   index.html                  built, self-contained dashboard (served by GitHub Pages)
 notes/
@@ -68,4 +69,4 @@ Issues and pull requests are welcome, especially corrections to drug classes or 
 
 ## License
 
-The code is released under the [MIT License](LICENSE). d3 is included under its own [ISC license](dashboard/vendor/d3-LICENSE.txt). The ratings and review counts come from Drugs.com and remain subject to Drugs.com's terms of use.
+The code is released under the [MIT License](LICENSE). d3 is included under its own [ISC license](dashboard/vendor/d3-LICENSE.txt), and the Fira Sans font under the [SIL Open Font License](dashboard/fonts/OFL.txt). The ratings and review counts come from Drugs.com and remain subject to Drugs.com's terms of use.
